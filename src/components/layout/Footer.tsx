@@ -1,33 +1,10 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { ROUTES, CONTACT, SOCIAL_LINKS, APP_NAME } from "@/lib/constants";
-
-const footerNavigation = {
-  destinations: [
-    { name: "Kinshasa", href: `${ROUTES.destinations}/kinshasa` },
-    { name: "Virunga", href: `${ROUTES.destinations}/virunga` },
-    { name: "Lac Kivu", href: `${ROUTES.destinations}/lac-kivu` },
-    { name: "Kisangani", href: `${ROUTES.destinations}/kisangani` },
-  ],
-  services: [
-    { name: "Organisation de Voyage", href: `${ROUTES.services}#travel-organization` },
-    { name: "Hébergement", href: `${ROUTES.services}#accommodation` },
-    { name: "Transport", href: `${ROUTES.services}#transport` },
-    { name: "Sécurité & Assistance", href: `${ROUTES.services}#security` },
-  ],
-  company: [
-    { name: "À Propos", href: ROUTES.about },
-    { name: "Blog", href: ROUTES.blog },
-    { name: "Partenaires", href: ROUTES.partners },
-    { name: "Contact", href: ROUTES.contact },
-  ],
-  legal: [
-    { name: "Politique de Confidentialité", href: ROUTES.legal.privacy },
-    { name: "Conditions d'Utilisation", href: ROUTES.legal.terms },
-    { name: "FAQ", href: ROUTES.legal.faq },
-  ],
-};
+import { useTranslation } from "@/i18n/LanguageProvider";
 
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: SOCIAL_LINKS.facebook },
@@ -37,7 +14,34 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  const footerNavigation = {
+    destinations: [
+      { name: "Kinshasa", href: `${ROUTES.destinations}/kinshasa` },
+      { name: "Virunga", href: `${ROUTES.destinations}/virunga` },
+      { name: t('footer.dest_lacKivu'), href: `${ROUTES.destinations}/lac-kivu` },
+      { name: "Kisangani", href: `${ROUTES.destinations}/kisangani` },
+    ],
+    services: [
+      { name: t('footer.svc_travel'), href: `${ROUTES.services}#travel-organization` },
+      { name: t('footer.svc_accommodation'), href: `${ROUTES.services}#accommodation` },
+      { name: t('footer.svc_transport'), href: `${ROUTES.services}#transport` },
+      { name: t('footer.svc_security'), href: `${ROUTES.services}#security` },
+    ],
+    company: [
+      { name: t('footer.co_about'), href: ROUTES.about },
+      { name: t('footer.co_blog'), href: ROUTES.blog },
+      { name: t('footer.co_partners'), href: ROUTES.partners },
+      { name: t('footer.co_contact'), href: ROUTES.contact },
+    ],
+    legal: [
+      { name: t('footer.legal_privacy'), href: ROUTES.legal.privacy },
+      { name: t('footer.legal_terms'), href: ROUTES.legal.terms },
+      { name: t('footer.legal_faq'), href: ROUTES.legal.faq },
+    ],
+  };
 
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -54,8 +58,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-4 max-w-md text-sm leading-relaxed">
-              Découvrez la beauté et la richesse de la République Démocratique du Congo.
-              Voyages authentiques, expériences inoubliables.
+              {t('footer.description')}
             </p>
             <div className="mt-6 space-y-3">
               <div className="flex items-center space-x-3 text-sm">
@@ -78,10 +81,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-white">Destinations</h3>
+            <h3 className="font-semibold text-white">{t('footer.destinations')}</h3>
             <ul className="mt-4 space-y-2">
               {footerNavigation.destinations.map((item) => (
-                <li key={item.name}>
+                <li key={item.href}>
                   <Link
                     href={item.href}
                     className="text-sm hover:text-white transition-colors"
@@ -94,10 +97,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-white">Services</h3>
+            <h3 className="font-semibold text-white">{t('footer.services')}</h3>
             <ul className="mt-4 space-y-2">
               {footerNavigation.services.map((item) => (
-                <li key={item.name}>
+                <li key={item.href}>
                   <Link
                     href={item.href}
                     className="text-sm hover:text-white transition-colors"
@@ -110,10 +113,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-white">Entreprise</h3>
+            <h3 className="font-semibold text-white">{t('footer.company')}</h3>
             <ul className="mt-4 space-y-2">
               {footerNavigation.company.map((item) => (
-                <li key={item.name}>
+                <li key={item.href}>
                   <Link
                     href={item.href}
                     className="text-sm hover:text-white transition-colors"
@@ -148,7 +151,7 @@ export default function Footer() {
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
               {footerNavigation.legal.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.href}
                   href={item.href}
                   className="hover:text-white transition-colors"
                 >
@@ -158,7 +161,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="mt-8 text-center text-sm">
-            &copy; {currentYear} {APP_NAME}. Tous droits réservés.
+            &copy; {currentYear} {APP_NAME}. {t('footer.allRightsReserved')}
           </p>
         </div>
       </div>

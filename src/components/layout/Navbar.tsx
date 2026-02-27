@@ -46,14 +46,14 @@ export default function Navbar() {
         ],
         featured: [
           {
-            title: "Découvrez Virunga",
-            description: "Le plus ancien parc d'Afrique",
+            title: t('megaMenu.destinations.featured1_title'),
+            description: t('megaMenu.destinations.featured1_desc'),
             image: "/images/virunga-featured.jpg",
             href: "/blog/virunga-guide"
           },
           {
-            title: "Guide de Kinshasa",
-            description: "Que faire dans la capitale",
+            title: t('megaMenu.destinations.featured2_title'),
+            description: t('megaMenu.destinations.featured2_desc'),
             image: "/images/kinshasa-featured.jpg",
             href: "/blog/kinshasa-guide"
           },
@@ -86,14 +86,14 @@ export default function Navbar() {
         ],
         featured: [
           {
-            title: "Safari Gorilles",
-            description: "Rencontre avec les gorilles",
+            title: t('megaMenu.experiences.featured1_title'),
+            description: t('megaMenu.experiences.featured1_desc'),
             image: "/images/gorilla-safari.jpg",
             href: ROUTES.experiences
           },
           {
-            title: "Circuit Culturel",
-            description: "Art et traditions congolaises",
+            title: t('megaMenu.experiences.featured2_title'),
+            description: t('megaMenu.experiences.featured2_desc'),
             image: "/images/culture-tour.jpg",
             href: ROUTES.experiences
           },
@@ -124,8 +124,8 @@ export default function Navbar() {
         ],
         featured: [
           {
-            title: "Nos Guides Experts",
-            description: "Rencontrez notre équipe",
+            title: t('megaMenu.services.featured1_title'),
+            description: t('megaMenu.services.featured1_desc'),
             image: "/images/guides-team.jpg",
             href: "/blog/meet-our-guides"
           },
@@ -314,7 +314,7 @@ export default function Navbar() {
                   
                   <div className="col-span-4 border-l border-gray-200 pl-10">
                     <h3 className="text-xs font-bold text-gray-900 mb-5 uppercase tracking-widest" style={{ fontFamily: 'var(--font-montserrat)', letterSpacing: '0.1em' }}>
-                      À Découvrir
+                      {t('megaMenu.destinations.featured')}
                     </h3>
                     <div className="space-y-5">
                       {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured.map((feature, idx) => (

@@ -1,44 +1,34 @@
-import type { Metadata } from "next";
+'use client';
+
 import Link from "next/link";
 import { ROUTES } from "@/lib/constants";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
-export const metadata: Metadata = {
-  title: "Forfaits",
-  description: "Découvrez nos forfaits de voyage pour explorer la RDC",
-};
-
-const categories = [
-  {
-    name: "Safari",
-    description: "Découvrez la faune exceptionnelle de la RDC",
-    slug: "safari",
-  },
-  {
-    name: "Culture & Patrimoine",
-    description: "Plongez dans la richesse culturelle congolaise",
-    slug: "culture-heritage",
-  },
-  {
-    name: "Aventure & Nature",
-    description: "Explorez les paysages époustouflants",
-    slug: "adventure-nature",
-  },
-  {
-    name: "Voyage d'Affaires",
-    description: "Solutions professionnelles pour vos déplacements",
-    slug: "business-travel",
-  },
+const categoryKeys = [
+  { nameKey: 'packages_page.cat1_name', descKey: 'packages_page.cat1_desc', slug: 'safari' },
+  { nameKey: 'packages_page.cat2_name', descKey: 'packages_page.cat2_desc', slug: 'culture-heritage' },
+  { nameKey: 'packages_page.cat3_name', descKey: 'packages_page.cat3_desc', slug: 'adventure-nature' },
+  { nameKey: 'packages_page.cat4_name', descKey: 'packages_page.cat4_desc', slug: 'business-travel' },
 ];
 
 export default function PackagesPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-white border-b border-gray-200">
-        <div className="hero-overlay" />
-        <div className="container-custom hero-content">
-          <h1 className="mb-6 animate-fade-in">Nos Forfaits</h1>
-          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200">
-            Des expériences sur mesure pour tous les voyageurs
+      <section
+        className="relative overflow-hidden py-32"
+        style={{
+          backgroundImage: "url(/images/destinations/forest.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-gray-900/70 to-zinc-900/80" />
+        <div className="relative container-custom text-white">
+          <h1 className="mb-6 animate-fade-in text-white">{t('packages_page.heroTitle')}</h1>
+          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200 text-white/90">
+            {t('packages_page.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -46,32 +36,32 @@ export default function PackagesPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="mb-12 text-center">
-            <h2 className="mb-4">Catégories de Forfaits</h2>
+            <h2 className="mb-4">{t('packages_page.categoriesTitle')}</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              Choisissez le type d'expérience qui vous correspond
+              {t('packages_page.categoriesSubtitle')}
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {categories.map((category) => (
+            {categoryKeys.map((category) => (
               <div
                 key={category.slug}
                 className="card group text-center"
               >
                 <div className="card-content">
                   <h3 className="mb-2 text-xl font-semibold group-hover:text-primary-600 transition-colors">
-                    {category.name}
+                    {t(category.nameKey)}
                   </h3>
-                  <p className="text-gray-600">{category.description}</p>
+                  <p className="text-gray-600">{t(category.descKey)}</p>
                 </div>
               </div>
             ))}
           </div>
           <div className="mt-12 text-center">
             <p className="mb-6 text-gray-600">
-              Nos forfaits détaillés seront bientôt disponibles.
+              {t('packages_page.comingSoon')}
             </p>
             <Link href={ROUTES.booking} className="btn btn-primary">
-              Demander un Devis Personnalisé
+              {t('packages_page.requestQuote')}
             </Link>
           </div>
         </div>

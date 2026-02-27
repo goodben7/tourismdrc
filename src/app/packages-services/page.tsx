@@ -1,6 +1,5 @@
 'use client';
 
-import type { Metadata } from "next";
 import { Check, Star } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
@@ -81,17 +80,23 @@ export default function PackagesServicesPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="section-padding bg-white border-b border-gray-200">
-        <div className="container-custom text-center">
-          <h1 className="mb-6 animate-fade-in">Service Packages / Forfaits de Services</h1>
-          <p className="mb-8 max-w-3xl mx-auto text-xl md:text-2xl text-gray-700 animate-fade-in animation-delay-200">
-            Choose the perfect package for your journey to the DRC
+      <section
+        className="relative overflow-hidden py-32"
+        style={{
+          backgroundImage: "url(/images/destinations/forest.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-teal-900/70 to-cyan-900/80" />
+        <div className="relative container-custom text-center text-white">
+          <h1 className="mb-6 animate-fade-in text-white">{t('packages_services_page.heroTitle')}</h1>
+          <p className="mb-8 max-w-3xl mx-auto text-xl md:text-2xl text-white/90 animate-fade-in animation-delay-200">
+            {t('packages_services_page.heroSubtitle')}
           </p>
         </div>
       </section>
 
-      {/* Packages Grid */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid lg:grid-cols-3 gap-8">
@@ -106,13 +111,12 @@ export default function PackagesServicesPage() {
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <div className="badge badge-warning flex items-center gap-1 px-4 py-2">
                       <Star className="h-4 w-4 fill-current" />
-                      <span className="font-bold">Most Popular</span>
+                      <span className="font-bold">{t('packages_services_page.mostPopular')}</span>
                     </div>
                   </div>
                 )}
                 
                 <div className="card-content flex-1 flex flex-col">
-                  {/* Header */}
                   <div className="text-center mb-8 pb-6 border-b border-gray-200">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       {pkg.name}
@@ -120,7 +124,6 @@ export default function PackagesServicesPage() {
                     <p className="text-lg text-gray-600">{pkg.duration}</p>
                   </div>
 
-                  {/* Included Items */}
                   <div className="mb-6 flex-1">
                     <h4 className="text-sm font-bold text-primary-600 uppercase tracking-wide mb-4">
                       {t('packages.standard.included')}
@@ -135,7 +138,6 @@ export default function PackagesServicesPage() {
                     </ul>
                   </div>
 
-                  {/* Optional Items */}
                   {pkg.optional.length > 0 && (
                     <div className="mb-6">
                       <h4 className="text-sm font-bold text-gray-600 uppercase tracking-wide mb-4">
@@ -152,7 +154,6 @@ export default function PackagesServicesPage() {
                     </div>
                   )}
 
-                  {/* CTA Button */}
                   <div className="mt-8 pt-6 border-t border-gray-200">
                     <Link
                       href={ROUTES.booking}
@@ -172,13 +173,12 @@ export default function PackagesServicesPage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="mb-6 text-3xl font-bold">Need a Custom Package?</h2>
+            <h2 className="mb-6 text-3xl font-bold">{t('packages_services_page.customTitle')}</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Contact us to create a personalized package that fits your specific needs and budget.
+              {t('packages_services_page.customText')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a

@@ -1,89 +1,60 @@
-import type { Metadata } from "next";
+'use client';
+
 import { Plane, Hotel, Car, Shield, Languages, HeartHandshake } from "lucide-react";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
-export const metadata: Metadata = {
-  title: "Services",
-  description: "Découvrez tous nos services pour votre voyage en RDC",
-};
-
-const services = [
+const serviceIcons = [Plane, Hotel, Car, Shield, Languages, HeartHandshake];
+const serviceKeys = [
   {
-    icon: Plane,
-    title: "Organisation de Voyage",
-    description: "Planification complète de votre séjour sur mesure, de A à Z.",
-    features: [
-      "Conception d'itinéraires personnalisés",
-      "Réservation de vols et transferts",
-      "Planification d'activités",
-      "Assistance administrative",
-    ],
+    titleKey: 'services_page.svc1_title',
+    descKey: 'services_page.svc1_desc',
+    featureKeys: ['services_page.svc1_feat1', 'services_page.svc1_feat2', 'services_page.svc1_feat3', 'services_page.svc1_feat4'],
   },
   {
-    icon: Hotel,
-    title: "Hébergement",
-    description: "Sélection d'hôtels et lodges de qualité adaptés à vos besoins.",
-    features: [
-      "Hôtels de luxe et boutiques",
-      "Lodges en pleine nature",
-      "Hébergements authentiques",
-      "Options pour tous budgets",
-    ],
+    titleKey: 'services_page.svc2_title',
+    descKey: 'services_page.svc2_desc',
+    featureKeys: ['services_page.svc2_feat1', 'services_page.svc2_feat2', 'services_page.svc2_feat3', 'services_page.svc2_feat4'],
   },
   {
-    icon: Car,
-    title: "Transport",
-    description: "Solutions de transport sûres et confortables.",
-    features: [
-      "Véhicules climatisés avec chauffeur",
-      "Transferts aéroport",
-      "Location de véhicules",
-      "Transport inter-villes",
-    ],
+    titleKey: 'services_page.svc3_title',
+    descKey: 'services_page.svc3_desc',
+    featureKeys: ['services_page.svc3_feat1', 'services_page.svc3_feat2', 'services_page.svc3_feat3', 'services_page.svc3_feat4'],
   },
   {
-    icon: Shield,
-    title: "Sécurité & Assistance",
-    description: "Accompagnement et sécurité 24/7 pendant votre séjour.",
-    features: [
-      "Assistance 24h/24",
-      "Guides de sécurité",
-      "Assurance voyage",
-      "Support d'urgence",
-    ],
+    titleKey: 'services_page.svc4_title',
+    descKey: 'services_page.svc4_desc',
+    featureKeys: ['services_page.svc4_feat1', 'services_page.svc4_feat2', 'services_page.svc4_feat3', 'services_page.svc4_feat4'],
   },
   {
-    icon: Languages,
-    title: "Traduction",
-    description: "Services de traduction et interprétation professionnels.",
-    features: [
-      "Interprètes qualifiés",
-      "Traduction de documents",
-      "Support multilingue",
-      "Accompagnement linguistique",
-    ],
+    titleKey: 'services_page.svc5_title',
+    descKey: 'services_page.svc5_desc',
+    featureKeys: ['services_page.svc5_feat1', 'services_page.svc5_feat2', 'services_page.svc5_feat3', 'services_page.svc5_feat4'],
   },
   {
-    icon: HeartHandshake,
-    title: "Assistance Locale",
-    description: "Support local pour faciliter vos démarches.",
-    features: [
-      "Contacts locaux",
-      "Assistance administrative",
-      "Recommandations locales",
-      "Support culturel",
-    ],
+    titleKey: 'services_page.svc6_title',
+    descKey: 'services_page.svc6_desc',
+    featureKeys: ['services_page.svc6_feat1', 'services_page.svc6_feat2', 'services_page.svc6_feat3', 'services_page.svc6_feat4'],
   },
 ];
 
 export default function ServicesPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-white border-b border-gray-200">
-        <div className="hero-overlay" />
-        <div className="container-custom hero-content">
-          <h1 className="mb-6 animate-fade-in">Nos Services</h1>
-          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200">
-            Des services complets pour un voyage sans souci en RDC
+      <section
+        className="relative overflow-hidden py-32"
+        style={{
+          backgroundImage: "url(/images/destinations/forest.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/80 via-emerald-900/70 to-green-900/80" />
+        <div className="relative container-custom text-white">
+          <h1 className="mb-6 animate-fade-in text-white">{t('services_page.heroTitle')}</h1>
+          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200 text-white/90">
+            {t('services_page.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -91,24 +62,24 @@ export default function ServicesPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid gap-8 lg:gap-12">
-            {services.map((service, index) => {
-              const Icon = service.icon;
+            {serviceKeys.map((svc, index) => {
+              const Icon = serviceIcons[index];
               return (
                 <div
-                  key={service.title}
+                  key={svc.titleKey}
                   className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center"
                 >
                   <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                     <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-lg bg-primary-500 text-white">
                       <Icon className="h-8 w-8" />
                     </div>
-                    <h2 className="mb-4">{service.title}</h2>
+                    <h2 className="mb-4">{t(svc.titleKey)}</h2>
                     <p className="mb-6 text-lg text-gray-600">
-                      {service.description}
+                      {t(svc.descKey)}
                     </p>
                     <ul className="space-y-3">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-start">
+                      {svc.featureKeys.map((featKey) => (
+                        <li key={featKey} className="flex items-start">
                           <svg
                             className="mr-3 mt-1 h-5 w-5 flex-shrink-0 text-primary-600"
                             fill="currentColor"
@@ -120,7 +91,7 @@ export default function ServicesPage() {
                               clipRule="evenodd"
                             />
                           </svg>
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700">{t(featKey)}</span>
                         </li>
                       ))}
                     </ul>

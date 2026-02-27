@@ -1,6 +1,5 @@
 'use client';
 
-import type { Metadata } from "next";
 import { Compass, Calendar, Mountain, Sparkles } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
@@ -11,26 +10,26 @@ export default function ExperiencesPage() {
 
   const experiencesByType = [
     {
-      title: t('megaMenu.experiences.safari'),
-      description: t('megaMenu.experiences.safari_desc'),
+      titleKey: 'megaMenu.experiences.safari',
+      descKey: 'megaMenu.experiences.safari_desc',
       icon: Compass,
       color: 'bg-green-500',
     },
     {
-      title: t('megaMenu.experiences.culture'),
-      description: t('megaMenu.experiences.culture_desc'),
+      titleKey: 'megaMenu.experiences.culture',
+      descKey: 'megaMenu.experiences.culture_desc',
       icon: Sparkles,
       color: 'bg-purple-500',
     },
     {
-      title: t('megaMenu.experiences.adventure'),
-      description: t('megaMenu.experiences.adventure_desc'),
+      titleKey: 'megaMenu.experiences.adventure',
+      descKey: 'megaMenu.experiences.adventure_desc',
       icon: Mountain,
       color: 'bg-orange-500',
     },
     {
-      title: t('megaMenu.experiences.wellness'),
-      description: t('megaMenu.experiences.wellness_desc'),
+      titleKey: 'megaMenu.experiences.wellness',
+      descKey: 'megaMenu.experiences.wellness_desc',
       icon: Calendar,
       color: 'bg-blue-500',
     },
@@ -38,46 +37,52 @@ export default function ExperiencesPage() {
 
   const experiencesByDuration = [
     {
-      title: t('megaMenu.experiences.weekend'),
-      description: t('megaMenu.experiences.weekend_desc'),
-      duration: '2-3 jours',
+      titleKey: 'megaMenu.experiences.weekend',
+      descKey: 'megaMenu.experiences.weekend_desc',
+      durationKey: 'experiences_page.weekend_duration',
     },
     {
-      title: t('megaMenu.experiences.week'),
-      description: t('megaMenu.experiences.week_desc'),
-      duration: '5-7 jours',
+      titleKey: 'megaMenu.experiences.week',
+      descKey: 'megaMenu.experiences.week_desc',
+      durationKey: 'experiences_page.week_duration',
     },
     {
-      title: t('megaMenu.experiences.extended'),
-      description: t('megaMenu.experiences.extended_desc'),
-      duration: '10+ jours',
+      titleKey: 'megaMenu.experiences.extended',
+      descKey: 'megaMenu.experiences.extended_desc',
+      durationKey: 'experiences_page.extended_duration',
     },
     {
-      title: t('megaMenu.experiences.custom'),
-      description: t('megaMenu.experiences.custom_desc'),
-      duration: 'Sur mesure',
+      titleKey: 'megaMenu.experiences.custom',
+      descKey: 'megaMenu.experiences.custom_desc',
+      durationKey: 'experiences_page.custom_duration',
     },
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="section-padding bg-white border-b border-gray-200">
-        <div className="container-custom text-center">
-          <h1 className="mb-6 animate-fade-in">Expériences</h1>
-          <p className="mb-8 max-w-3xl mx-auto text-xl md:text-2xl text-gray-700 animate-fade-in animation-delay-200">
-            Découvrez nos expériences uniques au cœur de la RDC
+      <section
+        className="relative overflow-hidden py-32"
+        style={{
+          backgroundImage: "url(/images/destinations/forest.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/80 via-amber-900/70 to-yellow-900/80" />
+        <div className="relative container-custom text-center text-white">
+          <h1 className="mb-6 animate-fade-in text-white">{t('experiences_page.heroTitle')}</h1>
+          <p className="mb-8 max-w-3xl mx-auto text-xl md:text-2xl text-white/90 animate-fade-in animation-delay-200">
+            {t('experiences_page.heroSubtitle')}
           </p>
         </div>
       </section>
 
-      {/* By Type Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-bold">{t('megaMenu.experiences.byType')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choisissez votre type d'expérience
+              {t('experiences_page.byTypeSubtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -88,8 +93,8 @@ export default function ExperiencesPage() {
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${exp.color} text-white mb-6 group-hover:scale-110 transition-transform`}>
                     <Icon className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{exp.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{exp.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">{t(exp.titleKey)}</h3>
+                  <p className="text-gray-600 leading-relaxed">{t(exp.descKey)}</p>
                 </div>
               );
             })}
@@ -97,13 +102,12 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
-      {/* By Duration Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-4xl font-bold">{t('megaMenu.experiences.byDuration')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Sélectionnez la durée de votre séjour
+              {t('experiences_page.byDurationSubtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -113,9 +117,9 @@ export default function ExperiencesPage() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-600 mb-6 group-hover:bg-primary-600 group-hover:text-white transition-all">
                     <Calendar className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">{exp.title}</h3>
-                  <p className="text-sm font-semibold text-primary-600 mb-3">{exp.duration}</p>
-                  <p className="text-gray-600 leading-relaxed">{exp.description}</p>
+                  <h3 className="text-xl font-bold mb-2 text-gray-900">{t(exp.titleKey)}</h3>
+                  <p className="text-sm font-semibold text-primary-600 mb-3">{t(exp.durationKey)}</p>
+                  <p className="text-gray-600 leading-relaxed">{t(exp.descKey)}</p>
                 </div>
               </div>
             ))}
@@ -123,13 +127,12 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
-      {/* Featured Experiences */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="mb-12 text-center">
-            <h2 className="mb-4 text-4xl font-bold">À Découvrir</h2>
+            <h2 className="mb-4 text-4xl font-bold">{t('experiences_page.featuredTitle')}</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Nos expériences phares
+              {t('experiences_page.featuredSubtitle')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -137,14 +140,14 @@ export default function ExperiencesPage() {
               <div className="relative h-64 bg-gradient-to-br from-green-400 to-green-600">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <h3 className="text-3xl font-bold mb-2">Safari Gorilles</h3>
-                    <p className="text-lg">Rencontre avec les gorilles de montagne</p>
+                    <h3 className="text-3xl font-bold mb-2">{t('experiences_page.safari_feat_title')}</h3>
+                    <p className="text-lg">{t('experiences_page.safari_feat_desc')}</p>
                   </div>
                 </div>
               </div>
               <div className="card-content">
                 <p className="text-gray-600 leading-relaxed">
-                  Une expérience inoubliable au cœur du Parc des Virunga pour observer les gorilles dans leur habitat naturel.
+                  {t('experiences_page.safari_feat_long')}
                 </p>
               </div>
             </div>
@@ -152,14 +155,14 @@ export default function ExperiencesPage() {
               <div className="relative h-64 bg-gradient-to-br from-purple-400 to-purple-600">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white">
-                    <h3 className="text-3xl font-bold mb-2">Circuit Culturel</h3>
-                    <p className="text-lg">Art et traditions congolaises</p>
+                    <h3 className="text-3xl font-bold mb-2">{t('experiences_page.culture_feat_title')}</h3>
+                    <p className="text-lg">{t('experiences_page.culture_feat_desc')}</p>
                   </div>
                 </div>
               </div>
               <div className="card-content">
                 <p className="text-gray-600 leading-relaxed">
-                  Immersion dans la richesse culturelle de la RDC, de Kinshasa aux villages traditionnels.
+                  {t('experiences_page.culture_feat_long')}
                 </p>
               </div>
             </div>
@@ -167,13 +170,12 @@ export default function ExperiencesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="section-padding bg-primary-50">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="mb-6 text-3xl font-bold">Prêt à Vivre l'Aventure ?</h2>
+            <h2 className="mb-6 text-3xl font-bold">{t('experiences_page.ctaTitle')}</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Contactez-nous pour créer votre expérience sur mesure
+              {t('experiences_page.ctaSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link

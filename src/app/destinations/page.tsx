@@ -1,19 +1,25 @@
-import type { Metadata } from "next";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Destinations",
-  description: "Découvrez les plus belles destinations de la République Démocratique du Congo",
-};
+import { useTranslation } from "@/i18n/LanguageProvider";
 
 export default function DestinationsPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-white border-b border-gray-200">
-        <div className="hero-overlay" />
-        <div className="container-custom hero-content">
-          <h1 className="mb-6 animate-fade-in">Nos Destinations</h1>
-          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200">
-            Explorez les merveilles naturelles et culturelles de la RDC
+      <section
+        className="relative overflow-hidden py-32"
+        style={{
+          backgroundImage: "url(/images/destinations/forest.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-emerald-900/70 to-teal-900/80" />
+        <div className="relative container-custom text-white">
+          <h1 className="mb-6 animate-fade-in text-white">{t('destinations_page.heroTitle')}</h1>
+          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200 text-white/90">
+            {t('destinations_page.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -21,10 +27,9 @@ export default function DestinationsPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center">
-            <h2 className="mb-4">Destinations Bientôt Disponibles</h2>
+            <h2 className="mb-4">{t('destinations_page.comingSoonTitle')}</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              Nous préparons une sélection exceptionnelle de destinations à travers la RDC.
-              Contactez-nous pour plus d'informations sur nos circuits disponibles.
+              {t('destinations_page.comingSoonText')}
             </p>
           </div>
         </div>

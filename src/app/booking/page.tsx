@@ -4,8 +4,10 @@ import { useState } from "react";
 import Input from "@/components/ui/Input";
 import Textarea from "@/components/ui/Textarea";
 import Button from "@/components/ui/Button";
+import { useTranslation } from "@/i18n/LanguageProvider";
 
 export default function BookingPage() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,7 +25,7 @@ export default function BookingPage() {
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    alert("Demande de devis envoyée avec succès ! Nous vous contacterons dans les 24h.");
+    alert(t('booking_page.successMessage'));
     setFormData({
       name: "",
       email: "",
@@ -44,12 +46,19 @@ export default function BookingPage() {
 
   return (
     <div className="min-h-screen">
-      <section className="section-padding bg-white border-b border-gray-200">
-        <div className="hero-overlay" />
-        <div className="container-custom hero-content">
-          <h1 className="mb-6 animate-fade-in">Demander un Devis</h1>
-          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200">
-            Remplissez le formulaire ci-dessous et nous vous contacterons rapidement
+      <section
+        className="relative overflow-hidden py-32"
+        style={{
+          backgroundImage: "url(/images/destinations/forest.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-blue-900/70 to-indigo-900/80" />
+        <div className="relative container-custom text-white">
+          <h1 className="mb-6 animate-fade-in text-white">{t('booking_page.heroTitle')}</h1>
+          <p className="mb-8 max-w-2xl text-lg md:text-xl animate-fade-in animation-delay-200 text-white/90">
+            {t('booking_page.heroSubtitle')}
           </p>
         </div>
       </section>
@@ -59,7 +68,7 @@ export default function BookingPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               <Input
-                label="Nom complet"
+                label={t('booking_page.fullName')}
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -77,7 +86,7 @@ export default function BookingPage() {
 
             <div className="grid gap-6 md:grid-cols-2">
               <Input
-                label="Téléphone"
+                label={t('booking_page.phone')}
                 type="tel"
                 name="phone"
                 value={formData.phone}
@@ -86,7 +95,7 @@ export default function BookingPage() {
               />
               <div>
                 <label htmlFor="numberOfPeople" className="label">
-                  Nombre de personnes
+                  {t('booking_page.numberOfPeople')}
                 </label>
                 <select
                   id="numberOfPeople"
@@ -98,17 +107,17 @@ export default function BookingPage() {
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                     <option key={num} value={num}>
-                      {num} {num === 1 ? "personne" : "personnes"}
+                      {num} {num === 1 ? t('booking_page.person') : t('booking_page.people')}
                     </option>
                   ))}
-                  <option value="10+">10+ personnes</option>
+                  <option value="10+">10+ {t('booking_page.people')}</option>
                 </select>
               </div>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
               <Input
-                label="Date de début"
+                label={t('booking_page.startDate')}
                 type="date"
                 name="startDate"
                 value={formData.startDate}
@@ -116,7 +125,7 @@ export default function BookingPage() {
                 required
               />
               <Input
-                label="Date de fin (optionnelle)"
+                label={t('booking_page.endDate')}
                 type="date"
                 name="endDate"
                 value={formData.endDate}
@@ -125,33 +134,33 @@ export default function BookingPage() {
             </div>
 
             <Input
-              label="Destination souhaitée"
+              label={t('booking_page.destination')}
               name="destination"
               value={formData.destination}
               onChange={handleChange}
-              placeholder="Ex: Virunga, Kinshasa, Lac Kivu..."
+              placeholder={t('booking_page.destinationPlaceholder')}
             />
 
             <Input
-              label="Budget approximatif (USD)"
+              label={t('booking_page.budget')}
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              placeholder="Ex: 1000-2000"
+              placeholder={t('booking_page.budgetPlaceholder')}
             />
 
             <Textarea
-              label="Demandes spéciales ou informations complémentaires"
+              label={t('booking_page.specialRequests')}
               name="specialRequests"
               value={formData.specialRequests}
               onChange={handleChange}
               rows={6}
-              placeholder="Décrivez vos attentes, préférences, besoins particuliers..."
+              placeholder={t('booking_page.specialRequestsPlaceholder')}
             />
 
             <div className="flex justify-center">
               <Button type="submit" variant="primary" size="lg" isLoading={isSubmitting}>
-                Envoyer la Demande de Devis
+                {t('booking_page.submit')}
               </Button>
             </div>
           </form>

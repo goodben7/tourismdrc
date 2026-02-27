@@ -50,9 +50,12 @@
   --color-accent-950: #1A0308;
 
   --font-family-display: "Playfair Display", Georgia, serif;
+  --font-poppins: "Poppins", system-ui, sans-serif;
+  --font-montserrat: "Montserrat", system-ui, sans-serif;
 }
 
 body {
+  font-family: var(--font-poppins);
   background-color: white;
   color: rgb(17 24 39);
   -webkit-font-smoothing: antialiased;

@@ -1,25 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins, Montserrat } from "next/font/google";
 import "@/styles/globals.css";
 import ReduxProvider from "@/components/providers/ReduxProvider";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { APP_NAME, APP_DESCRIPTION } from "@/lib/constants";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -64,8 +49,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${poppins.variable} ${montserrat.variable}`}>
-      <body className={poppins.className}>
+    <html lang="fr">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
         <LanguageProvider>
           <ReduxProvider>
             <Navbar />

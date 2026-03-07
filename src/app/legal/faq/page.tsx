@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
+import Image from "next/image";
 import { ROUTES } from "@/lib/constants";
 
 const faqData = [
@@ -92,14 +93,14 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen">
-      <section
-        className="relative overflow-hidden py-32"
-        style={{
-          backgroundImage: "url(/images/destinations/kinshasa.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="relative overflow-hidden py-32">
+        <Image
+          src="/images/destinations/kinshasa.jpeg"
+          alt="FAQ Background"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-violet-900/80 via-purple-900/70 to-indigo-900/80" />
         <div className="relative container-custom text-white">
           <h1 className="mb-6 animate-fade-in text-white">

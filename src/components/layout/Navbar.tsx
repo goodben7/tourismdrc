@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Globe, Check } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Check, Building2, Trees, MapPin, Compass, Calendar, Briefcase, HeartHandshake } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ROUTES } from "@/lib/constants";
 import Button from "@/components/ui/Button";
@@ -20,8 +20,8 @@ export default function Navbar() {
 
   const navigation = [
     { name: t('nav.home'), href: ROUTES.home },
-    { 
-      name: t('nav.destinations'), 
+    {
+      name: t('nav.destinations'),
       href: ROUTES.destinations,
       megaMenu: {
         columns: [
@@ -48,20 +48,20 @@ export default function Navbar() {
           {
             title: t('megaMenu.destinations.featured1_title'),
             description: t('megaMenu.destinations.featured1_desc'),
-            image: "/images/virunga-featured.jpg",
-            href: "/blog/virunga-guide"
+            image: "/images/destinations/vi-1.jpg",
+            href: "/destinations/virunga"
           },
           {
             title: t('megaMenu.destinations.featured2_title'),
             description: t('megaMenu.destinations.featured2_desc'),
-            image: "/images/kinshasa-featured.jpg",
-            href: "/blog/kinshasa-guide"
+            image: "/images/destinations/k-1.jpg",
+            href: "/destinations/kinshasa"
           },
         ]
       }
     },
-    { 
-      name: t('nav.experiences'), 
+    {
+      name: t('nav.experiences'),
       href: ROUTES.experiences,
       megaMenu: {
         columns: [
@@ -88,37 +88,37 @@ export default function Navbar() {
           {
             title: t('megaMenu.experiences.featured1_title'),
             description: t('megaMenu.experiences.featured1_desc'),
-            image: "/images/gorilla-safari.jpg",
+            image: "/images/destinations/vi-2.jpg",
             href: ROUTES.experiences
           },
           {
             title: t('megaMenu.experiences.featured2_title'),
             description: t('megaMenu.experiences.featured2_desc'),
-            image: "/images/culture-tour.jpg",
+            image: "/images/2.jpg",
             href: ROUTES.experiences
           },
         ]
       }
     },
-    { 
-      name: t('nav.services'), 
+    {
+      name: t('nav.services'),
       href: ROUTES.services,
       megaMenu: {
         columns: [
           {
             title: t('megaMenu.services.logistics'),
             links: [
-              { name: t('megaMenu.services.accommodation'), href: "/services/accommodation", description: t('megaMenu.services.accommodation_desc') },
-              { name: t('megaMenu.services.transport'), href: "/services/transport", description: t('megaMenu.services.transport_desc') },
-              { name: t('megaMenu.services.dining'), href: "/services/dining", description: t('megaMenu.services.dining_desc') },
+              { name: t('home.service1_name'), href: `${ROUTES.services}#airport`, description: t('home.service1_short') },
+              { name: t('home.service2_name'), href: `${ROUTES.services}#hotel`, description: t('home.service2_short') },
+              { name: t('home.service3_name'), href: `${ROUTES.services}#transport`, description: t('home.service3_short') },
             ]
           },
           {
             title: t('megaMenu.services.assistance'),
             links: [
-              { name: t('megaMenu.services.guides'), href: "/services/guides", description: t('megaMenu.services.guides_desc') },
-              { name: t('megaMenu.services.visa'), href: "/services/visa", description: t('megaMenu.services.visa_desc') },
-              { name: t('megaMenu.services.insurance'), href: "/services/insurance", description: t('megaMenu.services.insurance_desc') },
+              { name: t('home.service4_name'), href: `${ROUTES.services}#security`, description: t('home.service4_short') },
+              { name: t('home.service5_name'), href: `${ROUTES.services}#assistance`, description: t('home.service5_short') },
+              { name: t('home.service6_name'), href: `${ROUTES.services}#discovery`, description: t('home.service6_short') },
             ]
           },
         ],
@@ -126,8 +126,8 @@ export default function Navbar() {
           {
             title: t('megaMenu.services.featured1_title'),
             description: t('megaMenu.services.featured1_desc'),
-            image: "/images/guides-team.jpg",
-            href: "/blog/meet-our-guides"
+            image: "/images/services/c-1.jpg",
+            href: ROUTES.services
           },
         ]
       }
@@ -153,10 +153,10 @@ export default function Navbar() {
           {/* Logo à gauche */}
           <div className="flex items-center">
             <Link href={ROUTES.home} className="flex items-center space-x-2 group">
-              <Image 
-                src="/logo1.jpeg" 
-                alt="TourismDRC Logo" 
-                width={180} 
+              <Image
+                src="/logo1.jpeg"
+                alt="TourismDRC Logo"
+                width={180}
                 height={60}
                 className="mt-[-10px] w-auto transition-transform duration-300 group-hover:scale-105"
                 priority
@@ -169,11 +169,13 @@ export default function Navbar() {
             {/* Navigation principale */}
             <div className="flex items-center space-x-1">
               {navigation.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive = item.href === ROUTES.home
+                  ? pathname === item.href
+                  : pathname.startsWith(item.href);
                 const hasMegaMenu = item.megaMenu;
-                
+
                 return (
-                  <div 
+                  <div
                     key={item.name}
                     className="relative"
                   >
@@ -182,8 +184,8 @@ export default function Navbar() {
                         onClick={(e) => handleMenuClick(item.name, e)}
                         className={cn(
                           "px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 flex items-center gap-1",
-                          activeDropdown === item.name
-                            ? "bg-primary-50 text-primary-700" 
+                          activeDropdown === item.name || isActive
+                            ? "bg-primary-50 text-primary-700"
                             : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
                         )}
                       >
@@ -198,8 +200,8 @@ export default function Navbar() {
                         href={item.href}
                         className={cn(
                           "px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 flex items-center gap-1",
-                          isActive 
-                            ? "bg-primary-50 text-primary-700" 
+                          isActive
+                            ? "bg-primary-50 text-primary-700"
                             : "text-gray-700 hover:bg-gray-50 hover:text-primary-600"
                         )}
                       >
@@ -210,11 +212,11 @@ export default function Navbar() {
                 );
               })}
             </div>
-            
+
             {/* Boutons d'action */}
             <div className="flex items-center space-x-3 border-l border-gray-200 pl-6">
               <div className="relative">
-                <button 
+                <button
                   onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
                   className="flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors"
                 >
@@ -225,10 +227,10 @@ export default function Navbar() {
                     languageMenuOpen && "rotate-180"
                   )} />
                 </button>
-                
+
                 {languageMenuOpen && (
                   <>
-                    <div 
+                    <div
                       className="fixed inset-0 z-30"
                       onClick={() => setLanguageMenuOpen(false)}
                     />
@@ -258,8 +260,8 @@ export default function Navbar() {
                   </>
                 )}
               </div>
-              <Link 
-                href={ROUTES.booking} 
+              <Link
+                href={ROUTES.booking}
                 className="inline-flex items-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200"
               >
                 {t('nav.getQuote')}
@@ -269,79 +271,95 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-          
+
           {/* Mega Menu Dropdown */}
           {activeDropdown && navigation.find(item => item.name === activeDropdown)?.megaMenu && (
             <>
-              <div 
+              <div
                 className="fixed inset-0 z-40"
                 onClick={handleClickOutside}
               />
-              <div 
+              <div
                 className="absolute left-0 right-0 top-full mt-0 bg-white border-t border-gray-200 shadow-2xl z-50 animate-fade-in-down"
                 style={{ fontFamily: 'var(--font-poppins)' }}
               >
-              <div className="container-custom py-10">
-                <div className="grid grid-cols-12 gap-8">
-                  <div className="col-span-8">
-                    <div className="grid grid-cols-2 gap-12">
-                      {navigation.find(item => item.name === activeDropdown)?.megaMenu?.columns.map((column, idx) => (
-                        <div key={idx} className="animate-slide-up" style={{ animationDelay: `${idx * 100}ms` }}>
-                          <h3 className="text-xs font-bold text-gray-900 mb-5 uppercase tracking-widest" style={{ fontFamily: 'var(--font-montserrat)', letterSpacing: '0.1em' }}>
-                            {column.title}
-                          </h3>
-                          <ul className="space-y-4">
-                            {column.links.map((link, linkIdx) => (
-                              <li key={link.name} className="animate-fade-in" style={{ animationDelay: `${(idx * 100) + (linkIdx * 50)}ms` }}>
-                                <Link
-                                  href={link.href}
-                                  className="block group py-1 transition-all duration-200"
-                                >
-                                  <div className="font-semibold text-base text-gray-900 group-hover:text-primary-600 transition-colors duration-200 mb-1">
-                                    {link.name}
-                                  </div>
-                                  <div className="text-sm text-gray-500 group-hover:text-gray-700 transition-colors duration-200">
-                                    {link.description}
-                                  </div>
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                <div className="container-custom py-10">
+                  <div className="grid grid-cols-12 gap-8">
+                    <div className="col-span-8">
+                      <div className="grid grid-cols-2 gap-12">
+                        {navigation.find(item => item.name === activeDropdown)?.megaMenu?.columns.map((column, idx) => (
+                          <div key={idx} className="animate-slide-up" style={{ animationDelay: `${idx * 100}ms` }}>
+                            <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center gap-2">
+                              {column.title === t('megaMenu.destinations.cities') && <Building2 className="w-4 h-4 text-primary-500" />}
+                              {column.title === t('megaMenu.destinations.nature') && <Trees className="w-4 h-4 text-primary-500" />}
+                              {column.title === t('megaMenu.experiences.byType') && <Compass className="w-4 h-4 text-primary-500" />}
+                              {column.title === t('megaMenu.experiences.byDuration') && <Calendar className="w-4 h-4 text-primary-500" />}
+                              {column.title === t('megaMenu.services.logistics') && <Briefcase className="w-4 h-4 text-primary-500" />}
+                              {column.title === t('megaMenu.services.assistance') && <HeartHandshake className="w-4 h-4 text-primary-500" />}
+                              {column.title}
+                            </h3>
+                            <ul className="space-y-4">
+                              {column.links.map((link, linkIdx) => (
+                                <li key={link.name} className="animate-fade-in" style={{ animationDelay: `${(idx * 100) + (linkIdx * 50)}ms` }}>
+                                  <Link
+                                    href={link.href}
+                                    className="block group py-1 transition-all duration-200"
+                                    onClick={() => setActiveDropdown(null)}
+                                  >
+                                    <div className="font-bold text-[15px] text-slate-700 group-hover:text-primary-600 transition-colors duration-200 mb-1 leading-tight">
+                                      {link.name}
+                                    </div>
+                                    <div className="text-[13px] text-slate-500 font-medium group-hover:text-slate-600 transition-colors duration-200">
+                                      {link.description}
+                                    </div>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="col-span-4 border-l border-gray-200 pl-10">
-                    <h3 className="text-xs font-bold text-gray-900 mb-5 uppercase tracking-widest" style={{ fontFamily: 'var(--font-montserrat)', letterSpacing: '0.1em' }}>
-                      {t('megaMenu.destinations.featured')}
-                    </h3>
-                    <div className="space-y-5">
-                      {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured.map((feature, idx) => (
-                        <Link
-                          key={idx}
-                          href={feature.href}
-                          className="block group animate-fade-in"
-                          style={{ animationDelay: `${200 + (idx * 100)}ms` }}
-                        >
-                          <div className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                            <div className="absolute inset-0 bg-primary-600/0 group-hover:bg-primary-600/10 transition-colors duration-300" />
-                            <div className="absolute bottom-4 left-4 right-4">
-                              <div className="text-white font-bold text-base mb-1 group-hover:translate-x-1 transition-transform duration-200">
-                                {feature.title}
-                              </div>
-                              <div className="text-white/90 text-sm">
-                                {feature.description}
+
+                    <div className="col-span-4 border-l border-slate-100 pl-10 relative">
+                      <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-slate-200 to-transparent" />
+                      <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center gap-2">
+                        <MapPin className="w-4 h-4 text-primary-500" />
+                        {t('megaMenu.destinations.featured')}
+                      </h3>
+                      <div className="space-y-5">
+                        {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured.map((feature, idx) => (
+                          <Link
+                            key={idx}
+                            href={feature.href}
+                            className="block group animate-fade-in"
+                            style={{ animationDelay: `${200 + (idx * 100)}ms` }}
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <div className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
+                              <Image
+                                src={feature.image}
+                                alt={feature.title}
+                                fill
+                                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                              <div className="absolute inset-0 bg-primary-600/0 group-hover:bg-primary-600/10 transition-colors duration-300" />
+                              <div className="absolute bottom-4 left-4 right-4">
+                                <div className="text-white font-bold text-base mb-1 group-hover:translate-x-1 transition-transform duration-200">
+                                  {feature.title}
+                                </div>
+                                <div className="text-white/90 text-sm">
+                                  {feature.description}
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </Link>
-                      ))}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
               </div>
             </>
           )}
@@ -364,20 +382,20 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <>
             {/* Overlay */}
-            <div 
+            <div
               className="fixed inset-0 bg-black/50 z-40 lg:hidden animate-fade-in"
               onClick={() => setMobileMenuOpen(false)}
             />
-            
+
             {/* Sidebar */}
             <div className="fixed top-0 right-0 bottom-0 w-80 bg-white z-50 lg:hidden shadow-2xl animate-slide-in-right">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <div className="flex items-center space-x-2">
-                  <Image 
-                    src="/logo1.jpeg" 
-                    alt="TourismDRC Logo" 
-                    width={120} 
+                  <Image
+                    src="/logo1.jpeg"
+                    alt="TourismDRC Logo"
+                    width={120}
                     height={40}
                     className="w-auto"
                   />
@@ -397,7 +415,7 @@ export default function Navbar() {
                   {navigation.map((item) => {
                     const isActive = pathname === item.href;
                     const hasMegaMenu = item.megaMenu;
-                    
+
                     return (
                       <div key={item.name}>
                         {/* Main link */}
@@ -413,7 +431,7 @@ export default function Navbar() {
                         >
                           {item.name}
                         </Link>
-                        
+
                         {/* Sub-links from mega menu (flat structure) */}
                         {hasMegaMenu && (
                           <div className="ml-4 mt-2 space-y-1">
@@ -440,7 +458,7 @@ export default function Navbar() {
               {/* Footer Actions */}
               <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200 bg-white space-y-3">
                 <div className="relative">
-                  <button 
+                  <button
                     onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
                     className="flex w-full items-center justify-center space-x-2 rounded-lg px-4 py-3 text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 transition-colors"
                   >
@@ -451,7 +469,7 @@ export default function Navbar() {
                       languageMenuOpen && "rotate-180"
                     )} />
                   </button>
-                  
+
                   {languageMenuOpen && (
                     <div className="absolute bottom-full left-0 right-0 mb-2 bg-white rounded-lg shadow-xl border border-gray-200 py-2">
                       {locales.map((loc) => (
@@ -478,8 +496,8 @@ export default function Navbar() {
                     </div>
                   )}
                 </div>
-                <Link 
-                  href={ROUTES.booking} 
+                <Link
+                  href={ROUTES.booking}
                   className="flex w-full items-center justify-center gap-2 bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >

@@ -7,10 +7,11 @@ export const APP_DESCRIPTION = "Discover the beauty and richness of the Democrat
 export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://tourismdrc.com";
 
 export const CONTACT = {
-  email: "contact@tourismdrc.com",
-  phone: "+243 XX XXX XXXX",
-  whatsapp: "+243XXXXXXXXX",
-  address: "Kinshasa, Democratic Republic of Congo",
+  email: "Contact@TourismDRC.com",
+  phoneFr: "+243 894898210",
+  phoneEn: "+61 7 34730564",
+  whatsapp: "+243894898210",
+  address: "N° 63, Avenue Colonel, Commune de la Gombe, Kinshasa",
 } as const;
 
 export const SOCIAL_LINKS = {

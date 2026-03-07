@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
 
@@ -18,9 +19,16 @@ export default function HeroSection({
   backgroundImage = "/images/hero-drc.jpg",
 }: HeroSectionProps) {
   return (
-    <section className="hero-section" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <div className="hero-overlay" />
-      <div className="container-custom hero-content">
+    <section className="hero-section relative overflow-hidden">
+      <Image
+        src={backgroundImage}
+        alt={title}
+        fill
+        priority
+        className="object-cover"
+      />
+      <div className="hero-overlay relative z-10" />
+      <div className="container-custom hero-content relative z-20">
         <h1 className="mb-6 max-w-4xl animate-fade-in text-balance">
           {title}
         </h1>

@@ -4,9 +4,10 @@ import ReduxProvider from "@/components/providers/ReduxProvider";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { APP_NAME, APP_DESCRIPTION } from "@/lib/constants";
+import { APP_NAME, APP_DESCRIPTION, APP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(APP_URL),
   title: {
     default: APP_NAME,
     template: `%s | ${APP_NAME}`,
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: process.env.NEXT_PUBLIC_APP_URL,
+    url: "/",
     title: APP_NAME,
     description: APP_DESCRIPTION,
     siteName: APP_NAME,
@@ -40,6 +41,17 @@ export const metadata: Metadata = {
     title: APP_NAME,
     description: APP_DESCRIPTION,
     images: ["/logo.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

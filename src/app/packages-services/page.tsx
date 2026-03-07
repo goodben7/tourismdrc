@@ -3,6 +3,7 @@
 import { Check, Star } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import Link from "next/link";
+import Image from "next/image";
 import { ROUTES } from "@/lib/constants";
 
 export default function PackagesServicesPage() {
@@ -80,14 +81,14 @@ export default function PackagesServicesPage() {
 
   return (
     <div className="min-h-screen">
-      <section
-        className="relative overflow-hidden py-32"
-        style={{
-          backgroundImage: "url(/images/destinations/forest.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="relative overflow-hidden py-32">
+        <Image
+          src="/images/destinations/forest.jpeg"
+          alt="Packages Services Background"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/80 via-teal-900/70 to-cyan-900/80" />
         <div className="relative container-custom text-center text-white">
           <h1 className="mb-6 animate-fade-in text-white">{t('packages_services_page.heroTitle')}</h1>
@@ -103,9 +104,8 @@ export default function PackagesServicesPage() {
             {packages.map((pkg, index) => (
               <div
                 key={index}
-                className={`relative card h-full flex flex-col ${
-                  pkg.featured ? 'ring-2 ring-primary-500' : ''
-                }`}
+                className={`relative card h-full flex flex-col ${pkg.featured ? 'ring-2 ring-primary-500' : ''
+                  }`}
               >
                 {pkg.featured && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -115,7 +115,7 @@ export default function PackagesServicesPage() {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="card-content flex-1 flex flex-col">
                   <div className="text-center mb-8 pb-6 border-b border-gray-200">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -157,11 +157,10 @@ export default function PackagesServicesPage() {
                   <div className="mt-8 pt-6 border-t border-gray-200">
                     <Link
                       href={ROUTES.booking}
-                      className={`block w-full text-center px-6 py-4 rounded-lg font-bold text-lg transition-all duration-200 ${
-                        pkg.featured
+                      className={`block w-full text-center px-6 py-4 rounded-lg font-bold text-lg transition-all duration-200 ${pkg.featured
                           ? 'bg-primary-500 hover:bg-primary-600 text-white'
                           : 'bg-white hover:bg-gray-50 text-primary-600 border-2 border-primary-600'
-                      }`}
+                        }`}
                     >
                       {t('nav.getQuote')}
                     </Link>

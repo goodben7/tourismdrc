@@ -25,15 +25,16 @@ export interface DestinationData {
     howToGetThere: { fr: string; en: string };
     accommodation: { fr: string; en: string };
   };
-  tags: string[];
+  tags: { fr: string; en: string }[];
+  gallery?: string[];
 }
 
 export const destinations: DestinationData[] = [
   {
     slug: "kinshasa",
-    heroImage: "/images/destinations/kinshasa.jpeg",
+    heroImage: "/images/destinations/11.jpg",
     heroGradient: "from-orange-600 via-red-700 to-rose-900",
-    heroIcon: "🏙️",
+    heroIcon: "Building2",
     name: { fr: "Kinshasa", en: "Kinshasa" },
     tagline: {
       fr: "La capitale vibrante au bord du Congo",
@@ -55,7 +56,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "🎵",
+        icon: "Music",
         title: { fr: "Musique Congolaise", en: "Congolese Music" },
         description: {
           fr: "Berceau de la rumba congolaise, classée au patrimoine de l'UNESCO. Vivez les nuits animées de Kinshasa dans ses nombreux bars et clubs.",
@@ -63,7 +64,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🏛️",
+        icon: "Landmark",
         title: { fr: "Musée National", en: "National Museum" },
         description: {
           fr: "Le Musée National de la RDC abrite une collection impressionnante d'art et d'objets historiques témoignant de la richesse culturelle du pays.",
@@ -71,7 +72,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌊",
+        icon: "Waves",
         title: { fr: "Fleuve Congo", en: "Congo River" },
         description: {
           fr: "Promenez-vous sur les berges du deuxième fleuve le plus puissant du monde et profitez d'une vue imprenable sur Brazzaville.",
@@ -79,7 +80,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🛒",
+        icon: "ShoppingBag",
         title: { fr: "Marchés Colorés", en: "Colorful Markets" },
         description: {
           fr: "Le marché de Kinshasa-Gombe, de Gambela et de Zando sont des incontournables pour découvrir l'artisanat, les épices et la vie locale.",
@@ -113,13 +114,32 @@ export const destinations: DestinationData[] = [
         en: "Wide choice of 3 to 5-star hotels, lodges and guesthouses",
       },
     },
-    tags: ["Ville", "Culture", "Gastronomie", "Musique", "Histoire"],
+    tags: [
+      { fr: "Ville", en: "City" },
+      { fr: "Culture", en: "Culture" },
+      { fr: "Gastronomie", en: "Gastronomy" },
+      { fr: "Musique", en: "Music" },
+      { fr: "Histoire", en: "History" }
+    ],
+    gallery: [
+      "/images/destinations/k-1.jpg",
+      "/images/destinations/k-2.jpg",
+      "/images/destinations/k-3.jpg",
+      "/images/destinations/k-4.jpg",
+      "/images/destinations/k-5.jpg",
+      "/images/destinations/k-6.jpg",
+      "/images/destinations/k-7.jpg",
+      "/images/destinations/k-8.jpg",
+      "/images/destinations/k-9.jpg",
+      "/images/destinations/k-10.jpg",
+      "/images/destinations/11.jpg"
+    ]
   },
   {
     slug: "virunga",
-    heroImage: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "/images/destinations/vi-1.jpg",
     heroGradient: "from-green-700 via-emerald-800 to-teal-900",
-    heroIcon: "🦍",
+    heroIcon: "Mountain",
     name: { fr: "Parc des Virunga", en: "Virunga National Park" },
     tagline: {
       fr: "Le plus ancien parc d'Afrique, sanctuaire des gorilles",
@@ -141,7 +161,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "🦍",
+        icon: "Mountain",
         title: { fr: "Safari Gorilles", en: "Gorilla Safari" },
         description: {
           fr: "Une expérience unique au monde : observer les gorilles de montagne dans leur habitat naturel sous la conduite de rangers expérimentés.",
@@ -149,7 +169,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌋",
+        icon: "Flame",
         title: { fr: "Nyiragongo", en: "Nyiragongo" },
         description: {
           fr: "Ascension du mythique volcan Nyiragongo pour contempler le plus grand lac de lave du monde depuis son sommet à 3 470 m.",
@@ -157,7 +177,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🐘",
+        icon: "Binoculars",
         title: { fr: "Faune Exceptionnelle", en: "Exceptional Wildlife" },
         description: {
           fr: "Éléphants, hippopotames, okapis, lions et des centaines d'espèces d'oiseaux peuplent ce sanctuaire naturel unique.",
@@ -165,7 +185,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🏔️",
+        icon: "MapIcon",
         title: { fr: "Paysages Spectaculaires", en: "Spectacular Landscapes" },
         description: {
           fr: "Des volcans enneigés aux plaines de savane, en passant par les forêts tropicales, chaque paysage du Virunga est une œuvre d'art naturelle.",
@@ -199,13 +219,29 @@ export const destinations: DestinationData[] = [
         en: "Lodges in and around the park, on-site camping",
       },
     },
-    tags: ["Nature", "Safari", "Gorilles", "Volcans", "UNESCO"],
+    tags: [
+      { fr: "Nature", en: "Nature" },
+      { fr: "Safari", en: "Safari" },
+      { fr: "Gorilles", en: "Gorillas" },
+      { fr: "Volcans", en: "Volcanoes" },
+      { fr: "UNESCO", en: "UNESCO" }
+    ],
+    gallery: [
+      "/images/destinations/vi-1.jpg",
+      "/images/destinations/vi-2.jpg",
+      "/images/destinations/vi-3.jpg",
+      "/images/destinations/vi-4.jpg",
+      "/images/destinations/vi-5.jpg",
+      "/images/destinations/vi-6.jpg",
+      "/images/destinations/vi-7.jpg",
+      "/images/destinations/vi-8.jpeg"
+    ]
   },
   {
     slug: "goma",
-    heroImage: "https://images.unsplash.com/photo-1541795083-ce0e914a9d41?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "/images/destinations/g-1.jpg",
     heroGradient: "from-slate-700 via-gray-800 to-zinc-900",
-    heroIcon: "🌋",
+    heroIcon: "Flame",
     name: { fr: "Goma", en: "Goma" },
     tagline: {
       fr: "La porte des volcans au bord du lac Kivu",
@@ -227,7 +263,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "🏖️",
+        icon: "Umbrella",
         title: { fr: "Lac Kivu", en: "Lake Kivu" },
         description: {
           fr: "L'un des plus beaux lacs d'Afrique, aux eaux bleu-vert cristallines bordées de collines verdoyantes. Baignade, kayak et excursions en bateau au programme.",
@@ -235,7 +271,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌋",
+        icon: "Flame",
         title: { fr: "Lave du Nyiragongo", en: "Nyiragongo Lava" },
         description: {
           fr: "Les rues de lave noire solidifiée témoignent des éruptions passées et créent un décor spectaculaire, mélange de nature brute et vie urbaine.",
@@ -243,7 +279,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🛍️",
+        icon: "ShoppingBag",
         title: { fr: "Artisanat Local", en: "Local Crafts" },
         description: {
           fr: "Le marché artisanal de Goma regorge de sculptures en bois, bijoux traditionnels et tissu wax congolais.",
@@ -251,7 +287,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🏔️",
+        icon: "Mountain",
         title: { fr: "Vue sur les Volcans", en: "Volcano Views" },
         description: {
           fr: "Par temps clair, la vue sur le Nyiragongo et le Nyamuragira est saisissante depuis les hauteurs de Goma.",
@@ -285,13 +321,29 @@ export const destinations: DestinationData[] = [
         en: "3–4 star hotels, guesthouses, lodges with lake views",
       },
     },
-    tags: ["Ville", "Lac", "Volcans", "Nature", "Aventure"],
+    tags: [
+      { fr: "Ville", en: "City" },
+      { fr: "Lac", en: "Lake" },
+      { fr: "Volcans", en: "Volcanoes" },
+      { fr: "Nature", en: "Nature" },
+      { fr: "Aventure", en: "Adventure" }
+    ],
+    gallery: [
+      "/images/destinations/g-1.jpg",
+      "/images/destinations/g-2.jpg",
+      "/images/destinations/g-3.jpg",
+      "/images/destinations/g-4.jpg",
+      "/images/destinations/g-5.jpg",
+      "/images/destinations/g-6.jpg",
+      "/images/destinations/g-7.jpg",
+      "/images/destinations/g-8.jpg"
+    ]
   },
   {
     slug: "kisangani",
-    heroImage: "/images/destinations/forest.jpeg",
+    heroImage: "/images/destinations/ki-1.jpg",
     heroGradient: "from-green-600 via-teal-700 to-emerald-900",
-    heroIcon: "🌿",
+    heroIcon: "Leaf",
     name: { fr: "Kisangani", en: "Kisangani" },
     tagline: {
       fr: "Perle de l'Orientale au cœur de la forêt équatoriale",
@@ -313,7 +365,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "💧",
+        icon: "Droplet",
         title: { fr: "Chutes de Boyoma", en: "Boyoma Falls" },
         description: {
           fr: "Les 7 cataractes de Boyoma forment les chutes d'eau les plus puissantes du monde par débit. Un spectacle naturel époustouflant.",
@@ -321,7 +373,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌳",
+        icon: "Trees",
         title: { fr: "Forêt Équatoriale", en: "Equatorial Forest" },
         description: {
           fr: "Excursions dans la forêt vierge pour observer une biodiversité exceptionnelle : bonobos, okapis, centaines d'espèces d'oiseaux.",
@@ -329,7 +381,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🚢",
+        icon: "Ship",
         title: { fr: "Navigation sur le Congo", en: "Congo River Navigation" },
         description: {
           fr: "Embarquez sur le fleuve Congo pour une expérience hors du commun, au rythme lent d'un bateau traversant la jungle.",
@@ -337,7 +389,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🦜",
+        icon: "Bird",
         title: { fr: "Biodiversité Unique", en: "Unique Biodiversity" },
         description: {
           fr: "La région de Kisangani abrite une faune et une flore parmi les plus diversifiées d'Afrique, dont de nombreuses espèces endémiques.",
@@ -371,13 +423,30 @@ export const destinations: DestinationData[] = [
         en: "City centre hotels and guesthouses, forest lodges",
       },
     },
-    tags: ["Forêt", "Nature", "Chutes", "Aventure", "Faune"],
+    tags: [
+      { fr: "Forêt", en: "Forest" },
+      { fr: "Nature", en: "Nature" },
+      { fr: "Chutes", en: "Falls" },
+      { fr: "Aventure", en: "Adventure" },
+      { fr: "Faune", en: "Wildlife" }
+    ],
+    gallery: [
+      "/images/destinations/ki-1.jpg",
+      "/images/destinations/ki-2.jpg",
+      "/images/destinations/ki-3.jpg",
+      "/images/destinations/ki-4.jpg",
+      "/images/destinations/ki-5.jpg",
+      "/images/destinations/ki-6.jpg",
+      "/images/destinations/ki-7.jpg",
+      "/images/destinations/ki-8.jpg",
+      "/images/destinations/ki-9.jpg"
+    ]
   },
   {
     slug: "lubumbashi",
-    heroImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "/images/destinations/l-1.jpg",
     heroGradient: "from-amber-600 via-orange-700 to-red-800",
-    heroIcon: "⛏️",
+    heroIcon: "Pickaxe",
     name: { fr: "Lubumbashi", en: "Lubumbashi" },
     tagline: {
       fr: "La capitale du cuivre, carrefour économique du Sud",
@@ -399,7 +468,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "🏛️",
+        icon: "Landmark",
         title: { fr: "Musée du Katanga", en: "Katanga Museum" },
         description: {
           fr: "L'un des musées les plus riches d'Afrique centrale, avec des collections d'art traditionnel, d'objets historiques et minéraux exceptionnels.",
@@ -407,7 +476,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌿",
+        icon: "Leaf",
         title: { fr: "Zoo de Lubumbashi", en: "Lubumbashi Zoo" },
         description: {
           fr: "L'un des plus grands zoos d'Afrique subsaharienne, accueillant de nombreuses espèces animales endémiques du Katanga.",
@@ -415,7 +484,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🏗️",
+        icon: "Building",
         title: { fr: "Architecture Coloniale", en: "Colonial Architecture" },
         description: {
           fr: "Les bâtiments coloniaux belges du centre-ville témoignent d'une histoire fascinante et d'une architecture unique en Afrique.",
@@ -423,7 +492,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🛒",
+        icon: "ShoppingCart",
         title: { fr: "Marché Mzee", en: "Mzee Market" },
         description: {
           fr: "Le grand marché de Lubumbashi est un festival de couleurs et de saveurs, mêlant cultures congolaises, zambiennes et autres.",
@@ -457,13 +526,30 @@ export const destinations: DestinationData[] = [
         en: "4–5 star hotels, guesthouses, upscale residences",
       },
     },
-    tags: ["Ville", "Histoire", "Industrie", "Culture", "Commerce"],
+    tags: [
+      { fr: "Ville", en: "City" },
+      { fr: "Histoire", en: "History" },
+      { fr: "Industrie", en: "Industry" },
+      { fr: "Culture", en: "Culture" },
+      { fr: "Commerce", en: "Commerce" }
+    ],
+    gallery: [
+      "/images/destinations/l-1.jpg",
+      "/images/destinations/l-2.jpg",
+      "/images/destinations/l-3.jpg",
+      "/images/destinations/l-4.jpg",
+      "/images/destinations/l-5.jpg",
+      "/images/destinations/l-6.jpg",
+      "/images/destinations/l-7.jpg",
+      "/images/destinations/l-8.jpg",
+      "/images/destinations/l-9.jpg"
+    ]
   },
   {
     slug: "salonga",
-    heroImage: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "/images/destinations/sa-1.jpg",
     heroGradient: "from-emerald-700 via-green-800 to-teal-900",
-    heroIcon: "🌴",
+    heroIcon: "Palmtree",
     name: { fr: "Parc de la Salonga", en: "Salonga National Park" },
     tagline: {
       fr: "La plus grande forêt tropicale protégée d'Afrique",
@@ -485,7 +571,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "🐒",
+        icon: "Binoculars",
         title: { fr: "Safari Bonobos", en: "Bonobo Safari" },
         description: {
           fr: "Observer les bonobos, espèce endémique de la RDC et proche parent de l'homme, dans leur habitat naturel intact.",
@@ -493,7 +579,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌳",
+        icon: "Trees",
         title: { fr: "Forêt Primaire Intacte", en: "Intact Primary Forest" },
         description: {
           fr: "L'une des dernières grandes forêts tropicales intactes du monde, avec une canopée de plus de 40 mètres de hauteur.",
@@ -501,7 +587,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🐊",
+        icon: "Shield",
         title: { fr: "Faune Rarissime", en: "Rare Wildlife" },
         description: {
           fr: "Éléphants de forêt, crocodiles du Congo, paons congolais et de nombreuses espèces endémiques peuplent ce sanctuaire préservé.",
@@ -509,7 +595,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🚤",
+        icon: "Ship",
         title: { fr: "Navigation Fluviale", en: "River Navigation" },
         description: {
           fr: "Explorer le parc en pirogue sur les rivières Salonga, Yenge et Lomela pour une immersion totale dans la jungle.",
@@ -543,13 +629,29 @@ export const destinations: DestinationData[] = [
         en: "Eco-tourism lodges, camping supervised by rangers",
       },
     },
-    tags: ["Forêt", "Bonobos", "UNESCO", "Nature sauvage", "Éco-tourisme"],
+    tags: [
+      { fr: "Forêt", en: "Forest" },
+      { fr: "Bonobos", en: "Bonobos" },
+      { fr: "UNESCO", en: "UNESCO" },
+      { fr: "Nature sauvage", en: "Wild nature" },
+      { fr: "Éco-tourisme", en: "Eco-tourism" }
+    ],
+    gallery: [
+      "/images/destinations/sa-1.jpg",
+      "/images/destinations/sa-2.jpeg",
+      "/images/destinations/sa-3.jpg",
+      "/images/destinations/sa-4.jpg",
+      "/images/destinations/sa-5.jpg",
+      "/images/destinations/sa-6.jpg",
+      "/images/destinations/sa-7.jpg",
+      "/images/destinations/sa-8.jpg"
+    ]
   },
   {
     slug: "kahuzi",
-    heroImage: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "/images/destinations/ka-1.jpg",
     heroGradient: "from-teal-700 via-cyan-800 to-blue-900",
-    heroIcon: "🦍",
+    heroIcon: "Mountain",
     name: { fr: "Parc de Kahuzi-Biéga", en: "Kahuzi-Biéga National Park" },
     tagline: {
       fr: "Royaume des gorilles des plaines orientales",
@@ -571,7 +673,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "🦍",
+        icon: "Mountain",
         title: { fr: "Gorilles des Plaines", en: "Lowland Gorillas" },
         description: {
           fr: "Rencontrez les gorilles des plaines orientales, plus grands primates du monde, dans leur habitat naturel.",
@@ -579,7 +681,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🏔️",
+        icon: "Mountain",
         title: { fr: "Volcans Kahuzi et Biéga", en: "Kahuzi and Biéga Volcanoes" },
         description: {
           fr: "Ascension des volcans éteints Kahuzi et Biéga pour des panoramas spectaculaires sur les forêts et les lacs du Kivu.",
@@ -587,7 +689,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌿",
+        icon: "Leaf",
         title: { fr: "Forêts de Montagne", en: "Mountain Forests" },
         description: {
           fr: "Des forêts à bambous, des forêts de montagne et des zones marécageuses créent une diversité d'habitats exceptionnelle.",
@@ -595,7 +697,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🐦",
+        icon: "Bird",
         title: { fr: "Ornithologie", en: "Birdwatching" },
         description: {
           fr: "Plus de 349 espèces d'oiseaux recensées, dont plusieurs endémiques du Rift Albertin.",
@@ -629,13 +731,28 @@ export const destinations: DestinationData[] = [
         en: "Lodges at the park entrance, hotels in Bukavu",
       },
     },
-    tags: ["Gorilles", "Volcans", "UNESCO", "Forêt", "Trekking"],
+    tags: [
+      { fr: "Gorilles", en: "Gorillas" },
+      { fr: "Volcans", en: "Volcanoes" },
+      { fr: "UNESCO", en: "UNESCO" },
+      { fr: "Forêt", en: "Forest" },
+      { fr: "Trekking", en: "Trekking" }
+    ],
+    gallery: [
+      "/images/destinations/ka-1.jpg",
+      "/images/destinations/ka-2.jpg",
+      "/images/destinations/ka-3.jpg",
+      "/images/destinations/ka-4.jpg",
+      "/images/destinations/ka-5.JPG",
+      "/images/destinations/ka-6.jpg",
+      "/images/destinations/ka-7.jpg"
+    ]
   },
   {
     slug: "boyoma",
-    heroImage: "https://images.unsplash.com/photo-1536431311719-398b6704d4cc?auto=format&fit=crop&w=1920&q=80",
+    heroImage: "/images/destinations/bo-10.jpg",
     heroGradient: "from-blue-600 via-indigo-700 to-violet-900",
-    heroIcon: "💧",
+    heroIcon: "Droplet",
     name: { fr: "Chutes de Boyoma", en: "Boyoma Falls" },
     tagline: {
       fr: "Les chutes d'eau les plus puissantes du monde",
@@ -657,7 +774,7 @@ export const destinations: DestinationData[] = [
     ],
     highlights: [
       {
-        icon: "💧",
+        icon: "Droplet",
         title: { fr: "7 Cataractes", en: "7 Cataracts" },
         description: {
           fr: "Chaque cataracte est unique et offre un panorama différent sur la puissance brute du fleuve Congo en action.",
@@ -665,7 +782,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🐟",
+        icon: "Fish",
         title: { fr: "Pêche Traditionnelle", en: "Traditional Fishing" },
         description: {
           fr: "Observer la pêche traditionnelle avec des nasses en vannerie est l'un des spectacles les plus authentiques de la région.",
@@ -673,7 +790,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "🌿",
+        icon: "Leaf",
         title: { fr: "Jungle Environnante", en: "Surrounding Jungle" },
         description: {
           fr: "Les forêts denses qui encadrent les chutes abritent une faune riche : singes, oiseaux tropicaux, reptiles et insectes fascinants.",
@@ -681,7 +798,7 @@ export const destinations: DestinationData[] = [
         },
       },
       {
-        icon: "📸",
+        icon: "Camera",
         title: { fr: "Photographie Spectaculaire", en: "Spectacular Photography" },
         description: {
           fr: "Un paradis pour la photographie de nature et de paysage, avec des lumières matinales particulièrement magiques.",
@@ -715,7 +832,25 @@ export const destinations: DestinationData[] = [
         en: "Guesthouses and hotels in Kisangani, camping possible",
       },
     },
-    tags: ["Chutes", "Nature", "Fleuve", "Aventure", "Photographie"],
+    tags: [
+      { fr: "Chutes", en: "Falls" },
+      { fr: "Nature", en: "Nature" },
+      { fr: "Fleuve", en: "River" },
+      { fr: "Aventure", en: "Adventure" },
+      { fr: "Photographie", en: "Photography" }
+    ],
+    gallery: [
+      "/images/destinations/bo-1.jpg.webp",
+      "/images/destinations/bo-2.jpg.webp",
+      "/images/destinations/bo-3.jpg.webp",
+      "/images/destinations/bo-4.jpg.webp",
+      "/images/destinations/bo-5.jpg.webp",
+      "/images/destinations/bo-6.jpg.webp",
+      "/images/destinations/bo-7.jpg.webp",
+      "/images/destinations/bo-8.jpg.webp",
+      "/images/destinations/bo-9.jpg.webp",
+      "/images/destinations/bo-10.jpg"
+    ]
   },
 ];
 

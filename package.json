@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "node -e \"const fs=require('fs');try{fs.cpSync('node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node','node_modules/lightningcss/node/lightningcss.darwin-arm64.node')}catch(e){};try{fs.cpSync('node_modules/@tailwindcss/oxide-darwin-arm64/tailwindcss-oxide.darwin-arm64.node','node_modules/@tailwindcss/oxide/tailwindcss-oxide.darwin-arm64.node')}catch(e){}\""
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
     "axios": "^1.13.5",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.35.0",
     "lucide-react": "^0.575.0",
     "next": "16.1.6",
     "next-intl": "^4.8.3",
@@ -28,8 +30,13 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "lightningcss": "^1.31.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-darwin-arm64": "^4.2.0",
+    "lightningcss-darwin-arm64": "^1.31.1"
   }
 }

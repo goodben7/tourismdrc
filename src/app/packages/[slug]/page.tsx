@@ -2,6 +2,7 @@
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Clock, Users, BarChart, DollarSign, Check, X, ArrowRight, Tag, MapPin } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageProvider";
 import { getPackageBySlug } from "@/data/packages";
@@ -33,15 +34,14 @@ export default function PackagePage({ params }: PackagePageProps) {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section
-        className="relative overflow-hidden"
-        style={{
-          backgroundImage: `url(${pkg.heroImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section className="relative overflow-hidden min-h-[400px]">
+        <Image
+          src={pkg.heroImage}
+          alt={pkg.name[lang]}
+          fill
+          priority
+          className="object-cover"
+        />
         <div className={`absolute inset-0 bg-gradient-to-br ${pkg.heroGradient} opacity-70`} />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative container-custom py-24 md:py-36">

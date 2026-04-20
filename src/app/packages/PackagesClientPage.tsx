@@ -183,13 +183,13 @@ export default function PackagesPage() {
 
                   <div className="p-8 pt-0">
                     <Link
-                      href={ROUTES.booking}
+                      href={`${ROUTES.booking}?package=${pkg.id}`}
                       className={`w-full py-4 rounded-xl font-bold text-[13px] uppercase tracking-widest transition-all duration-400 flex items-center justify-center gap-3 ${pkg.featured
                         ? 'bg-primary-600 hover:bg-primary-700 text-white shadow-lg shadow-primary-600/20'
                         : 'bg-white border-2 border-slate-900 text-slate-900 hover:bg-slate-950 hover:text-white'
                         }`}
                     >
-                      {t('packages_page.requestQuote')}
+                      {t('home.bookNow')}
                     </Link>
                   </div>
                 </div>
@@ -326,10 +326,10 @@ export default function PackagesPage() {
                   <p className="text-xs text-slate-500">{t('packages_page.modalCtaSubtitle')}</p>
                 </div>
                 <Link
-                  href={ROUTES.booking}
+                  href={`${ROUTES.booking}?package=${selectedPkg.id}`}
                   className={`px-8 py-3.5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all ${selectedPkg.featured ? 'bg-primary-600 text-white' : 'bg-slate-900 text-white'}`}
                 >
-                  {t('packages_page.requestQuote')}
+                  {t('home.bookNow')}
                 </Link>
               </div>
             </div>

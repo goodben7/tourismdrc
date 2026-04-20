@@ -61,44 +61,33 @@ export default function Navbar() {
       }
     },
     {
-      name: t('nav.experiences'),
-      href: ROUTES.experiences,
+      name: t("nav.experiences"),
+      href: ROUTES.packages,
       megaMenu: {
         columns: [
           {
-            title: t('megaMenu.experiences.byType'),
+            title: t("home.packagesTitle"),
             links: [
-              { name: t('megaMenu.experiences.safari'), href: ROUTES.experiences, description: t('megaMenu.experiences.safari_desc') },
-              { name: t('megaMenu.experiences.culture'), href: ROUTES.experiences, description: t('megaMenu.experiences.culture_desc') },
-              { name: t('megaMenu.experiences.adventure'), href: ROUTES.experiences, description: t('megaMenu.experiences.adventure_desc') },
-              { name: t('megaMenu.experiences.wellness'), href: ROUTES.experiences, description: t('megaMenu.experiences.wellness_desc') },
-            ]
-          },
-          {
-            title: t('megaMenu.experiences.byDuration'),
-            links: [
-              { name: t('megaMenu.experiences.weekend'), href: ROUTES.experiences, description: t('megaMenu.experiences.weekend_desc') },
-              { name: t('megaMenu.experiences.week'), href: ROUTES.experiences, description: t('megaMenu.experiences.week_desc') },
-              { name: t('megaMenu.experiences.extended'), href: ROUTES.experiences, description: t('megaMenu.experiences.extended_desc') },
-              { name: t('megaMenu.experiences.custom'), href: ROUTES.experiences, description: t('megaMenu.experiences.custom_desc') },
-            ]
+              {
+                name: t("home.package1_title"),
+                href: ROUTES.packages,
+                description: t("home.package1_desc"),
+              },
+              {
+                name: t("home.package2_title"),
+                href: ROUTES.packages,
+                description: t("home.package2_desc"),
+              },
+              {
+                name: t("home.package3_title"),
+                href: ROUTES.packages,
+                description: t("home.package3_desc"),
+              },
+            ],
           },
         ],
-        featured: [
-          {
-            title: t('megaMenu.experiences.featured1_title'),
-            description: t('megaMenu.experiences.featured1_desc'),
-            image: "/images/destinations/vi-2.jpg",
-            href: ROUTES.experiences
-          },
-          {
-            title: t('megaMenu.experiences.featured2_title'),
-            description: t('megaMenu.experiences.featured2_desc'),
-            image: "/images/2.jpg",
-            href: ROUTES.experiences
-          },
-        ]
-      }
+        featured: [],
+      },
     },
     {
       name: t('nav.services'),
@@ -285,14 +274,15 @@ export default function Navbar() {
               >
                 <div className="container-custom py-10">
                   <div className="grid grid-cols-12 gap-8">
-                    <div className="col-span-8">
-                      <div className="grid grid-cols-2 gap-12">
+                    <div className={navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured?.length > 0 ? "col-span-8" : "col-span-12"}>
+                      <div className={`grid ${navigation.find(item => item.name === activeDropdown)?.megaMenu?.columns?.length > 1 ? "grid-cols-2" : "grid-cols-1 max-w-md mx-auto"} gap-12 text-center md:text-left`}>
                         {navigation.find(item => item.name === activeDropdown)?.megaMenu?.columns.map((column, idx) => (
                           <div key={idx} className="animate-slide-up" style={{ animationDelay: `${idx * 100}ms` }}>
-                            <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center gap-2">
+                            <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center justify-center md:justify-start gap-2">
                               {column.title === t('megaMenu.destinations.cities') && <Building2 className="w-4 h-4 text-primary-500" />}
                               {column.title === t('megaMenu.destinations.nature') && <Trees className="w-4 h-4 text-primary-500" />}
-                              {column.title === t('megaMenu.experiences.byType') && <Compass className="w-4 h-4 text-primary-500" />}
+                              {column.title === t('nav.experiences') && <Compass className="w-4 h-4 text-primary-500" />}
+                              {column.title === t('home.packagesTitle') && <Compass className="w-4 h-4 text-primary-500" />}
                               {column.title === t('megaMenu.experiences.byDuration') && <Calendar className="w-4 h-4 text-primary-500" />}
                               {column.title === t('megaMenu.services.logistics') && <Briefcase className="w-4 h-4 text-primary-500" />}
                               {column.title === t('megaMenu.services.assistance') && <HeartHandshake className="w-4 h-4 text-primary-500" />}
@@ -321,43 +311,45 @@ export default function Navbar() {
                       </div>
                     </div>
 
-                    <div className="col-span-4 border-l border-slate-100 pl-10 relative">
-                      <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-slate-200 to-transparent" />
-                      <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-primary-500" />
-                        {t('megaMenu.destinations.featured')}
-                      </h3>
-                      <div className="space-y-5">
-                        {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured.map((feature, idx) => (
-                          <Link
-                            key={idx}
-                            href={feature.href}
-                            className="block group animate-fade-in"
-                            style={{ animationDelay: `${200 + (idx * 100)}ms` }}
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            <div className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
-                              <Image
-                                src={feature.image}
-                                alt={feature.title}
-                                fill
-                                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                              <div className="absolute inset-0 bg-primary-600/0 group-hover:bg-primary-600/10 transition-colors duration-300" />
-                              <div className="absolute bottom-4 left-4 right-4">
-                                <div className="text-white font-bold text-base mb-1 group-hover:translate-x-1 transition-transform duration-200">
-                                  {feature.title}
-                                </div>
-                                <div className="text-white/90 text-sm">
-                                  {feature.description}
+                    {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured?.length > 0 && (
+                      <div className="col-span-4 border-l border-slate-100 pl-10 relative">
+                        <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-slate-200 to-transparent" />
+                        <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center gap-2">
+                          <MapPin className="w-4 h-4 text-primary-500" />
+                          {t('megaMenu.destinations.featured')}
+                        </h3>
+                        <div className="space-y-5">
+                          {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured.map((feature, idx) => (
+                            <Link
+                              key={idx}
+                              href={feature.href}
+                              className="block group animate-fade-in"
+                              style={{ animationDelay: `${200 + (idx * 100)}ms` }}
+                              onClick={() => setActiveDropdown(null)}
+                            >
+                              <div className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
+                                <Image
+                                  src={feature.image}
+                                  alt={feature.title}
+                                  fill
+                                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                                <div className="absolute inset-0 bg-primary-600/0 group-hover:bg-primary-600/10 transition-colors duration-300" />
+                                <div className="absolute bottom-4 left-4 right-4">
+                                  <div className="text-white font-bold text-base mb-1 group-hover:translate-x-1 transition-transform duration-200">
+                                    {feature.title}
+                                  </div>
+                                  <div className="text-white/90 text-sm">
+                                    {feature.description}
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </Link>
-                        ))}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>

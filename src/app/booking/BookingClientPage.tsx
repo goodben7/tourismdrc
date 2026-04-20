@@ -6,6 +6,7 @@ import Textarea from "@/components/ui/Textarea";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import { useTranslation } from "@/i18n/LanguageProvider";
+import { useSearchParams } from "next/navigation";
 import {
   Plane,
   Calendar,
@@ -19,12 +20,22 @@ import {
   CheckCircle2,
   Mail,
   User,
-  Phone
+  Phone,
+  Tag
 } from "lucide-react";
 
 export default function BookingPage() {
   const { t } = useTranslation();
+  const searchParams = useSearchParams();
+  const packageId = searchParams.get('package');
+  
   const [scrollY, setScrollY] = useState(0);
+  const packages = {
+    standard: { name: t('packages.standard.name'), price: "1200" },
+    silver: { name: t('packages.silver.name'), price: "1800" },
+    gold: { name: t('packages.gold.name'), price: "2500" },
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -35,7 +46,51 @@ export default function BookingPage() {
     destination: "",
     budget: "",
     specialRequests: "",
+    packageName: "",
+    duration: "0",
   });
+
+  // Handle initial package from URL
+  useEffect(() => {
+    if (packageId && packages[packageId as keyof typeof packages]) {
+      const pkg = packages[packageId as keyof typeof packages];
+      setFormData(prev => ({ 
+        ...prev, 
+        packageName: pkg.name,
+        budget: pkg.price,
+        destination: pkg.name
+      }));
+    }
+  }, [packageId, t]);
+
+  const handlePackageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const pkgId = e.target.value;
+    if (pkgId && packages[pkgId as keyof typeof packages]) {
+      const pkg = packages[pkgId as keyof typeof packages];
+      setFormData(prev => ({
+        ...prev,
+        packageName: pkg.name,
+        budget: pkg.price,
+        destination: pkg.name
+      }));
+    } else {
+      setFormData(prev => ({ ...prev, packageName: "", budget: "", destination: "" }));
+    }
+  };
+
+  // Calculate duration whenever dates change
+  useEffect(() => {
+    if (formData.startDate && formData.endDate) {
+      const start = new Date(formData.startDate);
+      const end = new Date(formData.endDate);
+      const diffTime = Math.abs(end.getTime() - start.getTime());
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      setFormData(prev => ({ ...prev, duration: diffDays.toString() }));
+    } else {
+      setFormData(prev => ({ ...prev, duration: "0" }));
+    }
+  }, [formData.startDate, formData.endDate]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
@@ -47,21 +102,30 @@ export default function BookingPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    alert(t('booking_page.successMessage'));
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      numberOfPeople: "1",
-      startDate: "",
-      endDate: "",
-      destination: "",
-      budget: "",
-      specialRequests: "",
-    });
-    setIsSubmitting(false);
+    
+    try {
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error(data.error || 'Failed to create checkout session');
+      }
+
+    } catch (error) {
+      console.error('Booking error:', error);
+      alert('An error occurred during booking. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -93,13 +157,13 @@ export default function BookingPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-6 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-primary-400 animate-pulse" />
-              {t('booking_page.heroTitle')}
+              {formData.packageName ? t('home.bookNow') : t('booking_page.heroTitle')}
             </div>
             <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-none mb-6 animate-slide-up">
-              {t('booking_page.heroTitle')}
+              {formData.packageName ? `Réservation : ${formData.packageName}` : t('booking_page.heroTitle')}
             </h1>
             <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed max-w-xl animate-slide-up animation-delay-100">
-              {t('booking_page.heroSubtitle')}
+              {formData.packageName ? "Finalisez votre réservation en quelques étapes simples." : t('booking_page.heroSubtitle')}
             </p>
           </div>
         </div>
@@ -116,9 +180,22 @@ export default function BookingPage() {
                 {/* Decorative blob */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 -z-10 group-hover:scale-110 transition-transform duration-700" />
 
-                <div className="mb-10 text-center md:text-left">
-                  <h2 className="text-3xl font-black text-slate-900 tracking-tight mb-4">{t('booking_page.formTitle')}</h2>
-                  <p className="text-slate-500 font-light">{t('booking_page.formSubtitle')}</p>
+                <div className="mb-10 text-center md:text-left relative">
+                  {formData.packageName && (
+                    <div className="mb-6 inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-primary-50 border border-primary-100 text-primary-700 animate-slide-right">
+                      <Tag className="w-4 h-4" />
+                      <div className="flex flex-col">
+                        <span className="text-[10px] font-black uppercase tracking-widest opacity-60 leading-none mb-1">Package Sélectionné</span>
+                        <span className="text-sm font-black tracking-tight">{formData.packageName}</span>
+                      </div>
+                    </div>
+                  )}
+                  <h2 className="text-3xl font-black text-slate-900 tracking-tight mb-4">
+                    {formData.packageName ? "Détails de votre Réservation" : t('booking_page.formTitle')}
+                  </h2>
+                  <p className="text-slate-500 font-light">
+                    {formData.packageName ? "Veuillez remplir vos informations pour valider votre séjour." : t('booking_page.formSubtitle')}
+                  </p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-8">
@@ -221,24 +298,57 @@ export default function BookingPage() {
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="relative">
-                        <Input
-                          label={t('booking_page.destination')}
-                          name="destination"
-                          value={formData.destination}
-                          onChange={handleChange}
-                          placeholder={t('booking_page.destinationPlaceholder')}
-                        />
-                        <MapPin className="absolute right-4 top-[42px] w-4 h-4 text-slate-400 pointer-events-none" />
+                        <label className="block text-sm font-bold text-slate-700 mb-2 pl-1">
+                          {t('booking_page.packageLabel')}
+                        </label>
+                        <div className="relative">
+                          <Tag className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 z-10" />
+                          <select
+                            name="packageId"
+                            onChange={handlePackageChange}
+                            defaultValue={packageId || ""}
+                            className="w-full h-12 pl-12 pr-4 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none transition-all duration-200 text-slate-800 text-sm appearance-none"
+                            required
+                          >
+                            <option value="">{t('booking_page.packageLabel')}</option>
+                            <option value="standard">{t('packages.standard.name')}</option>
+                            <option value="silver">{t('packages.silver.name')}</option>
+                            <option value="gold">{t('packages.gold.name')}</option>
+                          </select>
+                          <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 rotate-90 pointer-events-none" />
+                        </div>
                       </div>
                       <div className="relative">
                         <Input
                           label={t('booking_page.budget')}
                           name="budget"
                           value={formData.budget}
-                          onChange={handleChange}
+                          readOnly
                           placeholder={t('booking_page.budgetPlaceholder')}
                         />
                         <DollarSign className="absolute right-4 top-[42px] w-4 h-4 text-slate-400 pointer-events-none" />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="relative">
+                        <Input
+                          label={t('booking_page.destination')}
+                          name="destination"
+                          value={formData.destination}
+                          readOnly
+                          placeholder={t('booking_page.destinationPlaceholder')}
+                        />
+                        <MapPin className="absolute right-4 top-[42px] w-4 h-4 text-slate-400 pointer-events-none" />
+                      </div>
+                      <div className="col-span-2 relative">
+                        <Input
+                          label={t('home.duration')}
+                          name="duration_display"
+                          value={`${formData.duration} ${t('booking_page.people').toLowerCase() === 'people' ? 'day(s)' : 'jour(s)'}`}
+                          readOnly
+                        />
+                        <Clock className="absolute right-4 top-[42px] w-4 h-4 text-slate-400 pointer-events-none" />
                       </div>
                     </div>
                   </div>
@@ -272,7 +382,7 @@ export default function BookingPage() {
                         isLoading={isSubmitting}
                         className="w-full md:w-auto px-10 h-14 rounded-full bg-slate-900 hover:bg-primary-600 text-white shadow-xl shadow-slate-900/10 hover:shadow-primary-500/30 transition-all duration-500 font-black tracking-widest text-xs border border-slate-800 hover:border-primary-500"
                       >
-                        {t('booking_page.submit')}
+                        {formData.packageName ? `${t('home.bookNow')} : ${formData.packageName}` : t('booking_page.submit')}
                       </Button>
                     </div>
                   </div>

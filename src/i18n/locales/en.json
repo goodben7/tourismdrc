@@ -2,12 +2,12 @@
   "nav": {
     "home": "Home",
     "destinations": "Destinations",
-    "experiences": "Experiences",
+    "experiences": "Packages",
     "services": "Services",
     "about": "About",
     "blog": "Blog",
     "contact": "Contact",
-    "getQuote": "Get a Quote",
+    "getQuote": "Book a Package",
     "language": "English"
   },
   "hero": {
@@ -24,7 +24,7 @@
     "slide3": {
       "title": "Your Tailor-Made Journey",
       "subtitle": "Personalized tours for an authentic experience",
-      "cta": "Get a Quote"
+      "cta": "Book Now"
     }
   },
   "about": {
@@ -206,7 +206,7 @@
   "cta": {
     "title": "Ready to Discover the DRC?",
     "subtitle": "Contact us today to plan your tailor-made trip and experience something unforgettable in the Democratic Republic of Congo.",
-    "bookNow": "Get a Quote",
+    "bookNow": "Book Now",
     "whatsapp": "WhatsApp",
     "tagBadge": "Tailor-made Planning & 24/7 Assistance"
   },
@@ -272,10 +272,12 @@
     "hoursSunday": "Sunday: Closed"
   },
   "booking_page": {
-    "heroTitle": "Get a Quote",
-    "heroSubtitle": "Fill in the form below and we will contact you shortly",
-    "formTitle": "Trip Details",
-    "formSubtitle": "Receive a personalized proposal adapted to your needs.",
+    "heroTitle": "Book your Trip",
+    "heroSubtitle": "Complete the form below to confirm your booking",
+    "formTitle": "Your Reservation",
+    "formSubtitle": "Confirm your trip in seconds.",
+    "packageLabel": "Select a package",
+    "customPackage": "Tailor-made",
     "fullName": "Full name",
     "phone": "Phone",
     "numberOfPeople": "Number of people",
@@ -289,8 +291,8 @@
     "budgetPlaceholder": "E.g.: 1000-2000",
     "specialRequests": "Special requests or additional information",
     "specialRequestsPlaceholder": "Describe your expectations, preferences, special needs...",
-    "submit": "Submit Quote Request",
-    "successMessage": "Quote request sent successfully! We will contact you within 24 hours.",
+    "submit": "Confirm Booking",
+    "successMessage": "Your booking has been successfully recorded! Our team will contact you shortly.",
     "personalInfo": "Personal Information",
     "personalInfoPlaceholder": "Your full name",
     "emailPlaceholder": "your@email.com",
@@ -505,8 +507,55 @@
       "item3": "Personal driver 24/7 (deluxe vehicle)",
       "item4": "Snacks and beverages on board",
       "item5": "Unlimited Wi-Fi in the vehicle",
-      "item6": "Premium SIM card",
-      "secInfo1": "Security services (Optional)"
+      "item6": "Premium SIM Card",
+      "secInfo1": "Security service (optional)"
+    }
+  },
+  "admin": {
+    "title": "Reservation Management",
+    "subtitle": "Administration Area",
+    "totalRevenue": "Total Revenue",
+    "confirmed": "Confirmed",
+    "noBookings": "No reservations yet.",
+    "client": "Client",
+    "contact": "Contact",
+    "package": "Package",
+    "period": "Period",
+    "passengers": "Passengers",
+    "details": "Details",
+    "amount": "Amount",
+    "status": "Status",
+    "actions": "Actions",
+    "confirmedStatus": "CONFIRMED",
+    "pendingStatus": "PENDING",
+    "cancelledStatus": "CANCELLED",
+    "searchPlaceholder": "Search name, email...",
+    "filterAll": "All",
+    "filterPending": "Pending",
+    "filterConfirmed": "Confirmed",
+    "filterCancelled": "Cancelled",
+    "markAsPaid": "Confirm payment",
+    "markAsPending": "Set to pending",
+    "cancel": "Cancel booking",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this booking?",
+    "updateSuccess": "Update successful",
+    "updateError": "Update error",
+    "deleteSuccess": "Deleted successfully",
+    "deleteError": "Delete error",
+    "modal": {
+      "clientInfo": "Client Information",
+      "tripInfo": "Experience & Stay",
+      "fullName": "Full Name",
+      "contact": "Direct Contact",
+      "logistics": "Logistics",
+      "price": "Total Paid",
+      "transactionConfirmed": "Transaction Confirmed",
+      "notes": "Notes & Requests",
+      "close": "CLOSE",
+      "bookingId": "BOOKING ID",
+      "dates": "Stay Dates",
+      "duration": "confirmed days"
     }
   }
 }

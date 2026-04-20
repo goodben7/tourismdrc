@@ -5,6 +5,8 @@ import { Card, CardImage, CardContent } from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 import type { Package } from "@/types";
 
+import { useTranslation } from "@/i18n/LanguageProvider";
+
 interface PackageCardProps {
   package: Package;
 }
@@ -17,6 +19,8 @@ const categoryLabels: Record<Package["category"], string> = {
 };
 
 export default function PackageCard({ package: pkg }: PackageCardProps) {
+  const { locale } = useTranslation();
+  
   return (
     <Link href={`/packages/${pkg.slug}`} className="block">
       <Card className="group overflow-hidden h-full flex flex-col">
@@ -66,7 +70,7 @@ export default function PackageCard({ package: pkg }: PackageCardProps) {
             <div className="text-right">
               <p className="text-xs text-gray-500 mb-1">À partir de</p>
               <p className="text-lg font-bold text-primary-600">
-                {pkg.price.toLocaleString()} {pkg.currency}
+                {pkg.price.toLocaleString(locale === 'fr' ? 'fr-FR' : 'en-US')} {pkg.currency}
               </p>
             </div>
           </div>

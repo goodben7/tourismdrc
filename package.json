@@ -7,19 +7,28 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "node -e \"const fs=require('fs'); if(process.platform==='darwin') { try{fs.cpSync('node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node','node_modules/lightningcss/node/lightningcss.darwin-arm64.node')}catch(e){}; try{fs.cpSync('node_modules/@tailwindcss/oxide-darwin-arm64/tailwindcss-oxide.darwin-arm64.node','node_modules/@tailwindcss/oxide/tailwindcss-oxide.darwin-arm64.node')}catch(e){} }\""
+    "postinstall": "node -e \"const fs=require('fs'); if(process.platform==='darwin') { try{fs.cpSync('node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node','node_modules/lightningcss/node/lightningcss.darwin-arm64.node')}catch(e){}; try{fs.cpSync('node_modules/@tailwindcss/oxide-darwin-arm64/tailwindcss-oxide.darwin-arm64.node','node_modules/@tailwindcss/oxide/tailwindcss-oxide.darwin-arm64.node')}catch(e){} }\" && prisma generate"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.2",
+    "@prisma/adapter-libsql": "^7.5.0",
+    "@prisma/adapter-pg": "^7.5.0",
+    "@prisma/client": "^7.5.0",
     "@reduxjs/toolkit": "^2.11.2",
+    "@types/pg": "^8.20.0",
     "axios": "^1.13.5",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "framer-motion": "^12.35.0",
     "lucide-react": "^0.575.0",
     "next": "16.1.6",
     "next-intl": "^4.8.3",
+    "pg": "^8.20.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-redux": "^9.2.0",
+    "resend": "^6.9.4",
+    "stripe": "^21.0.1",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
@@ -32,6 +41,7 @@
     "eslint-config-next": "16.1.6",
     "lightningcss": "^1.31.1",
     "prettier-plugin-tailwindcss": "^0.6.14",
+    "prisma": "^7.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

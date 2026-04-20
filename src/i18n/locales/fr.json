@@ -2,12 +2,12 @@
   "nav": {
     "home": "Accueil",
     "destinations": "Destinations",
-    "experiences": "Expériences",
+    "experiences": "Forfaits",
     "services": "Services",
     "about": "À Propos",
     "blog": "Blog",
     "contact": "Contact",
-    "getQuote": "Demander un Devis",
+    "getQuote": "Réserver un Forfait",
     "language": "Français"
   },
   "hero": {
@@ -24,7 +24,7 @@
     "slide3": {
       "title": "Votre Voyage Sur Mesure",
       "subtitle": "Des circuits personnalisés pour une expérience authentique",
-      "cta": "Demander un Devis"
+      "cta": "Réserver Maintenant"
     }
   },
   "about": {
@@ -92,7 +92,7 @@
     "service6_short": "Support local pour vos démarches",
     "learnMore": "En savoir plus",
     "packagesTag": "Forfaits Populaires",
-    "packagesTitle": "Nos Forfaits Phares",
+    "packagesTitle": "Nos Forfait",
     "packagesIntro": "Découvrez nos forfaits les plus demandés pour explorer la RDC",
     "package1_title": "Forfait Standard",
     "package1_desc": "L'essentiel pour une première immersion : confort, flexibilité et découverte des incontournables.",
@@ -206,7 +206,7 @@
   "cta": {
     "title": "Prêt à Découvrir la RDC ?",
     "subtitle": "Contactez-nous dès aujourd'hui pour planifier votre voyage sur mesure et vivre une expérience inoubliable en République Démocratique du Congo.",
-    "bookNow": "Demander un Devis",
+    "bookNow": "Réserver Maintenant",
     "whatsapp": "WhatsApp",
     "tagBadge": "Planification sur mesure & Assistance 24/7"
   },
@@ -272,10 +272,12 @@
     "hoursSunday": "Dimanche: Fermé"
   },
   "booking_page": {
-    "heroTitle": "Demander un Devis",
-    "heroSubtitle": "Remplissez le formulaire ci-dessous et nous vous contacterons rapidement",
-    "formTitle": "Détails de votre Voyage",
-    "formSubtitle": "Recevez une proposition personnalisée adaptée à vos besoins.",
+    "heroTitle": "Réserver votre Forfait",
+    "heroSubtitle": "Remplissez le formulaire ci-dessous pour confirmer votre réservation",
+    "formTitle": "Détails de votre Réservation",
+    "formSubtitle": "Confirmez votre départ en quelques secondes.",
+    "packageLabel": "Sélectionnez votre forfait",
+    "customPackage": "Sur Mesure",
     "fullName": "Nom complet",
     "phone": "Téléphone",
     "numberOfPeople": "Nombre de personnes",
@@ -289,8 +291,8 @@
     "budgetPlaceholder": "Ex: 1000-2000",
     "specialRequests": "Demandes spéciales ou informations complémentaires",
     "specialRequestsPlaceholder": "Décrivez vos attentes, préférences, besoins particuliers...",
-    "submit": "Envoyer la Demande de Devis",
-    "successMessage": "Demande de devis envoyée avec succès ! Nous vous contacterons dans les 24h.",
+    "submit": "Confirmer la Réservation",
+    "successMessage": "Votre réservation a été enregistrée avec succès ! Notre équipe vous contactera sous peu.",
     "personalInfo": "Informations Personnelles",
     "personalInfoPlaceholder": "Votre nom complet",
     "emailPlaceholder": "votre@email.com",
@@ -404,7 +406,7 @@
     "cat4_name": "Voyage d'Affaires",
     "cat4_desc": "Solutions professionnelles pour vos déplacements",
     "comingSoon": "Nos forfaits détaillés seront bientôt disponibles.",
-    "requestQuote": "Demander un Devis Personnalisé",
+    "requestQuote": "Réserver Maintenant",
     "modalCtaTitle": "Prêt pour l'aventure ?",
     "modalCtaSubtitle": "Demandez votre devis sur mesure dès maintenant."
   },
@@ -507,6 +509,53 @@
       "item5": "Wi-Fi illimité dans le véhicule",
       "item6": "Carte SIM Premium",
       "secInfo1": "Service de sécurité (en option)"
+    }
+  },
+  "admin": {
+    "title": "Gestion des Réservations",
+    "subtitle": "Espace Administration",
+    "totalRevenue": "Total CA",
+    "confirmed": "Confirmées",
+    "noBookings": "Aucune réservation pour le moment.",
+    "client": "Client",
+    "contact": "Contact",
+    "package": "Forfait",
+    "period": "Période",
+    "passengers": "Passagers",
+    "details": "Détails",
+    "amount": "Montant",
+    "status": "Statut",
+    "actions": "Actions",
+    "confirmedStatus": "CONFIRMÉ",
+    "pendingStatus": "EN ATTENTE",
+    "cancelledStatus": "ANNULÉ",
+    "searchPlaceholder": "Rechercher un nom, email...",
+    "filterAll": "Tous",
+    "filterPending": "En attente",
+    "filterConfirmed": "Confirmés",
+    "filterCancelled": "Annulés",
+    "markAsPaid": "Confirmer le paiement",
+    "markAsPending": "Remettre en attente",
+    "cancel": "Annuler la réservation",
+    "delete": "Supprimer",
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette réservation ?",
+    "updateSuccess": "Mise à jour réussie",
+    "updateError": "Erreur de mise à jour",
+    "deleteSuccess": "Suppression réussie",
+    "deleteError": "Erreur de suppression",
+    "modal": {
+      "clientInfo": "Informations Client",
+      "tripInfo": "Expérience & Séjour",
+      "fullName": "Nom Complet",
+      "contact": "Contact Direct",
+      "logistics": "Logistique",
+      "price": "Total Payé",
+      "transactionConfirmed": "Transaction Confirmée",
+      "notes": "Notes & Demandes",
+      "close": "FERMER",
+      "bookingId": "RÉSERVATION ID",
+      "dates": "Dates du séjour",
+      "duration": "jours confirmés"
     }
   }
 }

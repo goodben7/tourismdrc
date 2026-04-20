@@ -23,6 +23,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className={cn(
             "w-full px-4 py-3 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 shadow-sm hover:border-primary-300 hover:bg-slate-50",
             error && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
+            props.readOnly && "bg-slate-100/80 border-slate-200 text-slate-500 cursor-not-allowed hover:border-slate-200",
             className
           )}
           {...props}

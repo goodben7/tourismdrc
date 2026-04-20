@@ -39,9 +39,9 @@ const serviceKeys = [
 ];
 
 const packageKeys = [
-  { image: "/images/packages/4.jpg", titleKey: 'home.package1_title', descKey: 'home.package1_desc', priceKey: 'home.package1_price', durationKey: 'home.package1_duration', highlight: true },
-  { image: "/images/packages/5.jpg", titleKey: 'home.package2_title', descKey: 'home.package2_desc', priceKey: 'home.package2_price', durationKey: 'home.package2_duration', highlight: false },
-  { image: "/images/packages/6.jpg", titleKey: 'home.package3_title', descKey: 'home.package3_desc', priceKey: 'home.package3_price', durationKey: 'home.package3_duration', highlight: false },
+  { id: 'standard', image: "/images/packages/4.jpg", titleKey: 'home.package1_title', descKey: 'home.package1_desc', priceKey: 'home.package1_price', durationKey: 'home.package1_duration', highlight: true },
+  { id: 'silver', image: "/images/packages/5.jpg", titleKey: 'home.package2_title', descKey: 'home.package2_desc', priceKey: 'home.package2_price', durationKey: 'home.package2_duration', highlight: false },
+  { id: 'gold', image: "/images/packages/6.jpg", titleKey: 'home.package3_title', descKey: 'home.package3_desc', priceKey: 'home.package3_price', durationKey: 'home.package3_duration', highlight: false },
 ];
 
 export default function Home() {
@@ -282,12 +282,15 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <button className={`w-full py-4 rounded-xl font-bold uppercase tracking-widest text-[11px] transition-all duration-300 ${pkg.highlight
-                      ? 'bg-primary-500 hover:bg-primary-600 text-white shadow-[0_10px_20px_-10px_rgba(0,102,204,0.5)]'
-                      : 'bg-slate-900 hover:bg-slate-950 text-white'
-                      }`}>
+                    <Link 
+                      href={`${ROUTES.booking}?package=${pkg.id}`}
+                      className={`w-full py-4 rounded-xl font-bold uppercase tracking-widest text-[11px] flex items-center justify-center transition-all duration-300 ${pkg.highlight
+                        ? 'bg-primary-500 hover:bg-primary-600 text-white shadow-[0_10px_20px_-10px_rgba(0,102,204,0.5)]'
+                        : 'bg-slate-900 hover:bg-slate-950 text-white'
+                      }`}
+                    >
                       {t('home.bookNow')}
-                    </button>
+                    </Link>
                   </div>
                 </div>
               );

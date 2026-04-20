@@ -135,6 +135,10 @@ export default function Navbar() {
     setActiveDropdown(null);
   };
 
+  const activeMegaMenu = activeDropdown 
+    ? navigation.find(item => item.name === activeDropdown)?.megaMenu 
+    : null;
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
       <nav className="w-[90%] mx-auto ">
@@ -274,9 +278,9 @@ export default function Navbar() {
               >
                 <div className="container-custom py-10">
                   <div className="grid grid-cols-12 gap-8">
-                    <div className={navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured?.length > 0 ? "col-span-8" : "col-span-12"}>
-                      <div className={`grid ${navigation.find(item => item.name === activeDropdown)?.megaMenu?.columns?.length > 1 ? "grid-cols-2" : "grid-cols-1 max-w-md mx-auto"} gap-12 text-center md:text-left`}>
-                        {navigation.find(item => item.name === activeDropdown)?.megaMenu?.columns.map((column, idx) => (
+                    <div className={(activeMegaMenu?.featured?.length ?? 0) > 0 ? "col-span-8" : "col-span-12"}>
+                      <div className={`grid ${(activeMegaMenu?.columns?.length ?? 0) > 1 ? "grid-cols-2" : "grid-cols-1 max-w-md mx-auto"} gap-12 text-center md:text-left`}>
+                        {activeMegaMenu?.columns.map((column, idx) => (
                           <div key={idx} className="animate-slide-up" style={{ animationDelay: `${idx * 100}ms` }}>
                             <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center justify-center md:justify-start gap-2">
                               {column.title === t('megaMenu.destinations.cities') && <Building2 className="w-4 h-4 text-primary-500" />}
@@ -311,7 +315,7 @@ export default function Navbar() {
                       </div>
                     </div>
 
-                    {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured?.length > 0 && (
+                    {activeMegaMenu?.featured && activeMegaMenu.featured.length > 0 && (
                       <div className="col-span-4 border-l border-slate-100 pl-10 relative">
                         <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-slate-200 to-transparent" />
                         <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center gap-2">

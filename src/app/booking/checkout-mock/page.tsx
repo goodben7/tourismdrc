@@ -1,13 +1,14 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CreditCard, Lock, ChevronLeft, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Button from "@/components/ui/Button";
 
-export default function CheckoutMockPage() {
+function CheckoutMockContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
@@ -170,5 +171,13 @@ export default function CheckoutMockPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CheckoutMockPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#F6F9FC]" />}>
+      <CheckoutMockContent />
+    </Suspense>
   );
 }

@@ -18,6 +18,10 @@ import { fr } from "date-fns/locale";
 
 import BookingListTable from "./BookingListTable";
 
+// Désactiver le cache Next.js - toujours récupérer les données fraîches
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function AdminBookingsPage() {
   let bookings: any[] = [];
   let error = null;

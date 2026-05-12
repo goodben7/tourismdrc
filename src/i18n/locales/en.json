@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "destinations": "Destinations",
+    "destinations": "Discover",
     "experiences": "Packages",
     "services": "Services",
     "about": "About",
@@ -14,7 +14,7 @@
     "slide1": {
       "title": "Discover the Beauty of DRC",
       "subtitle": "Explore breathtaking landscapes and rich culture",
-      "cta": "Our Destinations"
+      "cta": "Discover"
     },
     "slide2": {
       "title": "Unforgettable Adventures",
@@ -121,20 +121,16 @@
       "nature": "Nature & Parks",
       "kinshasa": "Kinshasa",
       "kinshasa_desc": "The dynamic capital",
-      "lubumbashi": "Lubumbashi",
-      "lubumbashi_desc": "Mining capital",
-      "goma": "Goma",
-      "goma_desc": "Gateway to volcanoes",
-      "kisangani": "Kisangani",
-      "kisangani_desc": "Pearl of the East",
-      "virunga": "Virunga Park",
-      "virunga_desc": "Mountain gorillas",
-      "salonga": "Salonga Park",
-      "salonga_desc": "Tropical rainforest",
-      "kahuzi": "Kahuzi-Biéga Park",
-      "kahuzi_desc": "Lowland gorillas",
-      "boyoma": "Boyoma Falls",
-      "boyoma_desc": "Spectacular waterfalls",
+      "zongo": "Zongo",
+      "zongo_desc": "Spectacular waterfalls",
+      "kisantu": "Kisantu",
+      "kisantu_desc": "Historic botanical garden",
+      "moanda": "Moanda",
+      "moanda_desc": "DRC's only coastal city",
+      "matadi": "Matadi",
+      "matadi_desc": "Port city and OEBK bridge",
+      "nsele": "N'Sele Park",
+      "nsele_desc": "Safari and relaxation near the city",
       "featured": "Discover",
       "featured1_title": "Discover Virunga",
       "featured1_desc": "Africa's oldest national park",
@@ -186,7 +182,7 @@
   },
   "footer": {
     "description": "Discover the beauty and richness of the Democratic Republic of Congo. Authentic travels, unforgettable experiences.",
-    "destinations": "Destinations",
+    "destinations": "Discover",
     "services": "Services",
     "company": "Company",
     "dest_lacKivu": "Lake Kivu",
@@ -367,7 +363,7 @@
     "ctaBadge": "Reply in less than 24h"
   },
   "destinations_page": {
-    "heroTitle": "Our Destinations",
+    "heroTitle": "Discover",
     "heroSubtitle": "Explore the natural and cultural wonders of the DRC",
     "comingSoonTitle": "Destinations Coming Soon",
     "comingSoonText": "We are preparing an exceptional selection of destinations across the DRC. Contact us for more information on available tours."

@@ -29,35 +29,20 @@ export default function Navbar() {
             title: t('megaMenu.destinations.cities'),
             links: [
               { name: t('megaMenu.destinations.kinshasa'), href: "/destinations/kinshasa", description: t('megaMenu.destinations.kinshasa_desc') },
-              { name: t('megaMenu.destinations.lubumbashi'), href: "/destinations/lubumbashi", description: t('megaMenu.destinations.lubumbashi_desc') },
-              { name: t('megaMenu.destinations.goma'), href: "/destinations/goma", description: t('megaMenu.destinations.goma_desc') },
-              { name: t('megaMenu.destinations.kisangani'), href: "/destinations/kisangani", description: t('megaMenu.destinations.kisangani_desc') },
+              { name: t('megaMenu.destinations.moanda'), href: "/destinations/moanda", description: t('megaMenu.destinations.moanda_desc') },
+              { name: t('megaMenu.destinations.matadi'), href: "/destinations/matadi", description: t('megaMenu.destinations.matadi_desc') },
             ]
           },
           {
             title: t('megaMenu.destinations.nature'),
             links: [
-              { name: t('megaMenu.destinations.virunga'), href: "/destinations/virunga", description: t('megaMenu.destinations.virunga_desc') },
-              { name: t('megaMenu.destinations.salonga'), href: "/destinations/salonga", description: t('megaMenu.destinations.salonga_desc') },
-              { name: t('megaMenu.destinations.kahuzi'), href: "/destinations/kahuzi", description: t('megaMenu.destinations.kahuzi_desc') },
-              { name: t('megaMenu.destinations.boyoma'), href: "/destinations/boyoma", description: t('megaMenu.destinations.boyoma_desc') },
+              { name: t('megaMenu.destinations.zongo'), href: "/destinations/zongo", description: t('megaMenu.destinations.zongo_desc') },
+              { name: t('megaMenu.destinations.kisantu'), href: "/destinations/kisantu", description: t('megaMenu.destinations.kisantu_desc') },
+              { name: t('megaMenu.destinations.nsele'), href: "/destinations/nsele", description: t('megaMenu.destinations.nsele_desc') },
             ]
           },
         ],
-        featured: [
-          {
-            title: t('megaMenu.destinations.featured1_title'),
-            description: t('megaMenu.destinations.featured1_desc'),
-            image: "/images/destinations/vi-1.jpg",
-            href: "/destinations/virunga"
-          },
-          {
-            title: t('megaMenu.destinations.featured2_title'),
-            description: t('megaMenu.destinations.featured2_desc'),
-            image: "/images/destinations/k-1.jpg",
-            href: "/destinations/kinshasa"
-          },
-        ]
+        featured: []
       }
     },
     {
@@ -111,14 +96,7 @@ export default function Navbar() {
             ]
           },
         ],
-        featured: [
-          {
-            title: t('megaMenu.services.featured1_title'),
-            description: t('megaMenu.services.featured1_desc'),
-            image: "/images/services/c-1.jpg",
-            href: ROUTES.services
-          },
-        ]
+        featured: []
       }
     },
     { name: t('nav.about'), href: ROUTES.about },
@@ -315,48 +293,9 @@ export default function Navbar() {
                       </div>
                     </div>
 
-                    {activeMegaMenu?.featured && activeMegaMenu.featured.length > 0 && (
-                      <div className="col-span-4 border-l border-slate-100 pl-10 relative">
-                        <div className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-transparent via-slate-200 to-transparent" />
-                        <h3 className="text-sm font-black text-slate-800 mb-6 tracking-widest flex items-center gap-2">
-                          <MapPin className="w-4 h-4 text-primary-500" />
-                          {t('megaMenu.destinations.featured')}
-                        </h3>
-                        <div className="space-y-5">
-                          {navigation.find(item => item.name === activeDropdown)?.megaMenu?.featured.map((feature, idx) => (
-                            <Link
-                              key={idx}
-                              href={feature.href}
-                              className="block group animate-fade-in"
-                              style={{ animationDelay: `${200 + (idx * 100)}ms` }}
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              <div className="relative aspect-video rounded-xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 shadow-md group-hover:shadow-xl transition-all duration-300 group-hover:scale-[1.02]">
-                                <Image
-                                  src={feature.image}
-                                  alt={feature.title}
-                                  fill
-                                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                                <div className="absolute inset-0 bg-primary-600/0 group-hover:bg-primary-600/10 transition-colors duration-300" />
-                                <div className="absolute bottom-4 left-4 right-4">
-                                  <div className="text-white font-bold text-base mb-1 group-hover:translate-x-1 transition-transform duration-200">
-                                    {feature.title}
-                                  </div>
-                                  <div className="text-white/90 text-sm">
-                                    {feature.description}
-                                  </div>
-                                </div>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    </div>
                   </div>
                 </div>
-              </div>
             </>
           )}
 

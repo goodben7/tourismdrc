@@ -11,13 +11,16 @@ import {
   Palmtree,
   Droplet,
   ArrowRight,
-  MapPin
+  MapPin,
+  Waves,
+  Ship,
+  Binoculars
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 const iconMap: Record<string, any> = {
-  Building2, Mountain, Flame, Leaf, Pickaxe, Palmtree, Droplet
+  Building2, Mountain, Flame, Leaf, Pickaxe, Palmtree, Droplet, Waves, Ship, Binoculars
 };
 
 export default function DestinationsPage() {

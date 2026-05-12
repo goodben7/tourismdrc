@@ -125,735 +125,461 @@ export const destinations: DestinationData[] = [
       "/images/destinations/k-1.jpg",
       "/images/destinations/k-2.jpg",
       "/images/destinations/k-3.jpg",
-      "/images/destinations/k-4.jpg",
-      "/images/destinations/k-5.jpg",
-      "/images/destinations/k-6.jpg",
-      "/images/destinations/k-7.jpg",
-      "/images/destinations/k-8.jpg",
-      "/images/destinations/k-9.jpg",
-      "/images/destinations/k-10.jpg",
       "/images/destinations/11.jpg"
     ]
   },
   {
-    slug: "virunga",
-    heroImage: "/images/destinations/vi-1.jpg",
-    heroGradient: "from-green-700 via-emerald-800 to-teal-900",
-    heroIcon: "Mountain",
-    name: { fr: "Parc des Virunga", en: "Virunga National Park" },
+    slug: "zongo",
+    heroImage: "/images/destinations/zongo.jpg",
+    heroGradient: "from-blue-600 via-cyan-700 to-teal-900",
+    heroIcon: "Waves",
+    name: { fr: "Zongo", en: "Zongo" },
     tagline: {
-      fr: "Le plus ancien parc d'Afrique, sanctuaire des gorilles",
-      en: "Africa's oldest park, sanctuary of the gorillas",
+      fr: "Les chutes spectaculaires au cœur du Kongo Central",
+      en: "Spectacular waterfalls in the heart of Kongo Central",
     },
     description: {
-      fr: "Classé au patrimoine mondial de l'UNESCO, le Parc des Virunga est un joyau naturel abritant les derniers gorilles de montagne du monde, des volcans actifs et des paysages à couper le souffle.",
-      en: "Listed as a UNESCO World Heritage Site, Virunga National Park is a natural jewel home to the world's last mountain gorillas, active volcanoes and breathtaking landscapes.",
+      fr: "Nichées au cœur d'une forêt tropicale luxuriante, les chutes de Zongo sont un spectacle naturel d'une puissance rare. Une escapade idéale pour se ressourcer loin du tumulte urbain.",
+      en: "Nestled in the heart of a lush tropical forest, Zongo Falls are a natural spectacle of rare power. An ideal getaway to recharge away from the urban hustle.",
     },
     longDescription: {
-      fr: "Fondé en 1925, le Parc des Virunga est le plus ancien parc national d'Afrique et l'un des plus riches en biodiversité au monde. S'étendant sur 7 800 km² dans l'est de la RDC, il abrite plus de 700 espèces d'oiseaux, des forêts tropicales denses, des savanes, des glaciers et les volcans Nyiragongo et Nyamuragira. Le trekking pour observer les gorilles de montagne dans leur habitat naturel reste l'expérience phare de tout séjour au Virunga.",
-      en: "Founded in 1925, Virunga National Park is Africa's oldest national park and one of the world's richest in biodiversity. Spanning 7,800 km² in eastern DRC, it is home to over 700 bird species, dense tropical forests, savannas, glaciers and the Nyiragongo and Nyamuragira volcanoes. Trekking to observe mountain gorillas in their natural habitat remains the highlight of any Virunga stay.",
+      fr: "À environ 130 km de Kinshasa, dans la province du Kongo Central, les chutes de Zongo s'élèvent majestueusement à 65 mètres de hauteur sur la rivière Inkisi. Le site est une véritable ode à la puissance de la nature : le fracas de l'eau s'écrasant dans le bassin crée un nuage de brume perpétuel et des arcs-en-ciel éblouissants. Le parcours pour atteindre les différents belvédères vous fait traverser une végétation dense, offrant des points de vue variés sur les cataractes. C'est l'endroit rêvé pour les amoureux de randonnée, de photographie de nature et de sérénité. Le soir venu, le calme de la forêt et le chant des oiseaux tropicaux offrent une expérience de déconnexion totale, faisant de Zongo l'une des destinations les plus prisées pour un week-end au vert.",
+      en: "About 130 km from Kinshasa, in the Kongo Central province, Zongo Falls rise majestically to 65 meters high on the Inkisi River. The site is a true ode to the power of nature: the roar of the water crashing into the basin creates a perpetual cloud of mist and dazzling rainbows. The path to reach the different viewpoints takes you through dense vegetation, offering varied perspectives on the cataracts. It is the perfect place for lovers of hiking, nature photography, and serenity. In the evening, the calm of the forest and the song of tropical birds offer a total disconnection experience, making Zongo one of the most popular destinations for a green weekend.",
     },
     stats: [
-      { label: { fr: "Superficie", en: "Area" }, value: "7 800 km²" },
-      { label: { fr: "Gorilles", en: "Gorillas" }, value: "480+" },
-      { label: { fr: "Espèces d'oiseaux", en: "Bird species" }, value: "700+" },
-      { label: { fr: "Fondé", en: "Founded" }, value: "1925" },
+      { label: { fr: "Distance de Kin", en: "Distance from Kin" }, value: "130 km" },
+      { label: { fr: "Hauteur des chutes", en: "Falls Height" }, value: "65 m" },
+      { label: { fr: "Température eau", en: "Water Temp" }, value: "22°C" },
+      { label: { fr: "Rivière", en: "River" }, value: "Inkisi" },
     ],
     highlights: [
       {
-        icon: "Mountain",
-        title: { fr: "Safari Gorilles", en: "Gorilla Safari" },
+        icon: "Waves",
+        title: { fr: "Les Chutes Majestueuses", en: "The Majestic Falls" },
         description: {
-          fr: "Une expérience unique au monde : observer les gorilles de montagne dans leur habitat naturel sous la conduite de rangers expérimentés.",
-          en: "A once-in-a-lifetime experience: observing mountain gorillas in their natural habitat guided by experienced rangers.",
-        },
-      },
-      {
-        icon: "Flame",
-        title: { fr: "Nyiragongo", en: "Nyiragongo" },
-        description: {
-          fr: "Ascension du mythique volcan Nyiragongo pour contempler le plus grand lac de lave du monde depuis son sommet à 3 470 m.",
-          en: "Climb the mythical Nyiragongo volcano to behold the world's largest lava lake from its 3,470m summit.",
-        },
-      },
-      {
-        icon: "Binoculars",
-        title: { fr: "Faune Exceptionnelle", en: "Exceptional Wildlife" },
-        description: {
-          fr: "Éléphants, hippopotames, okapis, lions et des centaines d'espèces d'oiseaux peuplent ce sanctuaire naturel unique.",
-          en: "Elephants, hippos, okapis, lions and hundreds of bird species inhabit this unique natural sanctuary.",
-        },
-      },
-      {
-        icon: "MapIcon",
-        title: { fr: "Paysages Spectaculaires", en: "Spectacular Landscapes" },
-        description: {
-          fr: "Des volcans enneigés aux plaines de savane, en passant par les forêts tropicales, chaque paysage du Virunga est une œuvre d'art naturelle.",
-          en: "From snow-capped volcanoes to savanna plains and tropical forests, every Virunga landscape is a natural work of art.",
-        },
-      },
-    ],
-    activities: [
-      { fr: "Trekking gorilles", en: "Gorilla trekking" },
-      { fr: "Ascension du Nyiragongo", en: "Nyiragongo ascent" },
-      { fr: "Safari en jeep", en: "Jeep safari" },
-      { fr: "Observation des oiseaux", en: "Bird watching" },
-      { fr: "Visite des sources chaudes", en: "Hot springs visit" },
-      { fr: "Randonnée en forêt", en: "Forest hiking" },
-    ],
-    practicalInfo: {
-      bestTime: {
-        fr: "Juin à Septembre et Décembre à Février (saisons sèches)",
-        en: "June to September and December to February (dry seasons)",
-      },
-      climate: {
-        fr: "Montagnard frais, 15–22°C, plus frais la nuit",
-        en: "Cool mountain climate, 15–22°C, cooler at night",
-      },
-      howToGetThere: {
-        fr: "Vol jusqu'à Goma (GOM), puis transfert en véhicule vers le parc (1h)",
-        en: "Fly to Goma (GOM), then vehicle transfer to the park (1h)",
-      },
-      accommodation: {
-        fr: "Lodges dans et autour du parc, camping sur place",
-        en: "Lodges in and around the park, on-site camping",
-      },
-    },
-    tags: [
-      { fr: "Nature", en: "Nature" },
-      { fr: "Safari", en: "Safari" },
-      { fr: "Gorilles", en: "Gorillas" },
-      { fr: "Volcans", en: "Volcanoes" },
-      { fr: "UNESCO", en: "UNESCO" }
-    ],
-    gallery: [
-      "/images/destinations/vi-1.jpg",
-      "/images/destinations/vi-2.jpg",
-      "/images/destinations/vi-3.jpg",
-      "/images/destinations/vi-4.jpg",
-      "/images/destinations/vi-5.jpg",
-      "/images/destinations/vi-6.jpg",
-      "/images/destinations/vi-7.jpg",
-      "/images/destinations/vi-8.jpeg"
-    ]
-  },
-  {
-    slug: "goma",
-    heroImage: "/images/destinations/g-1.jpg",
-    heroGradient: "from-slate-700 via-gray-800 to-zinc-900",
-    heroIcon: "Flame",
-    name: { fr: "Goma", en: "Goma" },
-    tagline: {
-      fr: "La porte des volcans au bord du lac Kivu",
-      en: "The gateway to volcanoes on the shores of Lake Kivu",
-    },
-    description: {
-      fr: "Goma, ville frontière avec le Rwanda, est le point de départ idéal pour explorer le Parc des Virunga. Bâtie sur des coulées de lave solidifiée, elle offre un caractère unique entre lac azuré et volcans majestueux.",
-      en: "Goma, the border city with Rwanda, is the ideal starting point for exploring Virunga National Park. Built on solidified lava flows, it offers a unique character between an azure lake and majestic volcanoes.",
-    },
-    longDescription: {
-      fr: "Goma est une ville au caractère singulier : construite en partie sur des coulées de lave issues du Nyiragongo, elle présente des rues pavées de basalte noir qui lui confèrent une atmosphère unique en Afrique. Porte d'entrée vers le Parc des Virunga et les gorilles de montagne, elle est aussi le point de départ pour les aventures sur le lac Kivu, dont les îles et les plages sont de véritables joyaux. La ville possède un marché artisanal riche et une scène culturelle en plein essor.",
-      en: "Goma is a city with a singular character: built partly on lava flows from Nyiragongo, it has streets paved with black basalt that give it a unique atmosphere in Africa. Gateway to Virunga National Park and mountain gorillas, it is also the starting point for adventures on Lake Kivu, whose islands and beaches are true gems. The city has a rich artisan market and a burgeoning cultural scene.",
-    },
-    stats: [
-      { label: { fr: "Habitants", en: "Inhabitants" }, value: "670K+" },
-      { label: { fr: "Altitude", en: "Altitude" }, value: "1 490 m" },
-      { label: { fr: "Lac Kivu", en: "Lake Kivu" }, value: "2 700 km²" },
-      { label: { fr: "Virunga", en: "Virunga" }, value: "45 min" },
-    ],
-    highlights: [
-      {
-        icon: "Umbrella",
-        title: { fr: "Lac Kivu", en: "Lake Kivu" },
-        description: {
-          fr: "L'un des plus beaux lacs d'Afrique, aux eaux bleu-vert cristallines bordées de collines verdoyantes. Baignade, kayak et excursions en bateau au programme.",
-          en: "One of Africa's most beautiful lakes, with crystal-clear blue-green waters bordered by lush hills. Swimming, kayaking and boat trips on the agenda.",
-        },
-      },
-      {
-        icon: "Flame",
-        title: { fr: "Lave du Nyiragongo", en: "Nyiragongo Lava" },
-        description: {
-          fr: "Les rues de lave noire solidifiée témoignent des éruptions passées et créent un décor spectaculaire, mélange de nature brute et vie urbaine.",
-          en: "The streets of solidified black lava bear witness to past eruptions and create a spectacular backdrop, blending raw nature with urban life.",
-        },
-      },
-      {
-        icon: "ShoppingBag",
-        title: { fr: "Artisanat Local", en: "Local Crafts" },
-        description: {
-          fr: "Le marché artisanal de Goma regorge de sculptures en bois, bijoux traditionnels et tissu wax congolais.",
-          en: "Goma's craft market is full of wood sculptures, traditional jewelry and Congolese wax fabric.",
-        },
-      },
-      {
-        icon: "Mountain",
-        title: { fr: "Vue sur les Volcans", en: "Volcano Views" },
-        description: {
-          fr: "Par temps clair, la vue sur le Nyiragongo et le Nyamuragira est saisissante depuis les hauteurs de Goma.",
-          en: "On clear days, the view of Nyiragongo and Nyamuragira from Goma's heights is breathtaking.",
-        },
-      },
-    ],
-    activities: [
-      { fr: "Excursion en bateau sur le lac Kivu", en: "Boat trip on Lake Kivu" },
-      { fr: "Visite des îles du lac Kivu", en: "Lake Kivu island visit" },
-      { fr: "Départ trekking gorilles", en: "Gorilla trekking departure" },
-      { fr: "Visite du marché artisanal", en: "Craft market visit" },
-      { fr: "Baignade dans le lac", en: "Swimming in the lake" },
-      { fr: "Tour de la ville sur lave", en: "City tour on lava" },
-    ],
-    practicalInfo: {
-      bestTime: {
-        fr: "Juin à Septembre (saison sèche, meilleure visibilité)",
-        en: "June to September (dry season, best visibility)",
-      },
-      climate: {
-        fr: "Tempéré d'altitude, 18–25°C, agréable toute l'année",
-        en: "High-altitude temperate, 18–25°C, pleasant year-round",
-      },
-      howToGetThere: {
-        fr: "Aéroport de Goma (GOM), vols depuis Kinshasa, Nairobi, Kigali",
-        en: "Goma Airport (GOM), flights from Kinshasa, Nairobi, Kigali",
-      },
-      accommodation: {
-        fr: "Hôtels 3–4 étoiles, guesthouses, lodges avec vue sur le lac",
-        en: "3–4 star hotels, guesthouses, lodges with lake views",
-      },
-    },
-    tags: [
-      { fr: "Ville", en: "City" },
-      { fr: "Lac", en: "Lake" },
-      { fr: "Volcans", en: "Volcanoes" },
-      { fr: "Nature", en: "Nature" },
-      { fr: "Aventure", en: "Adventure" }
-    ],
-    gallery: [
-      "/images/destinations/g-1.jpg",
-      "/images/destinations/g-2.jpg",
-      "/images/destinations/g-3.jpg",
-      "/images/destinations/g-4.jpg",
-      "/images/destinations/g-5.jpg",
-      "/images/destinations/g-6.jpg",
-      "/images/destinations/g-7.jpg",
-      "/images/destinations/g-8.jpg"
-    ]
-  },
-  {
-    slug: "kisangani",
-    heroImage: "/images/destinations/ki-1.jpg",
-    heroGradient: "from-green-600 via-teal-700 to-emerald-900",
-    heroIcon: "Leaf",
-    name: { fr: "Kisangani", en: "Kisangani" },
-    tagline: {
-      fr: "Perle de l'Orientale au cœur de la forêt équatoriale",
-      en: "Pearl of the East at the heart of the equatorial forest",
-    },
-    description: {
-      fr: "Kisangani, ancienne Stanleyville, est une ville mystérieuse nichée au cœur de la plus grande forêt tropicale du monde. Les chutes de Boyoma et le fleuve Congo en font une destination d'aventure et de découverte.",
-      en: "Kisangani, formerly Stanleyville, is a mysterious city nestled in the heart of the world's largest tropical forest. The Boyoma Falls and the Congo River make it a destination for adventure and discovery.",
-    },
-    longDescription: {
-      fr: "Située à l'équateur même, Kisangani est entourée de la forêt tropicale congolaise, l'une des plus vastes et des plus riches en biodiversité au monde. La ville est traversée par le puissant fleuve Congo et est connue pour les spectaculaires chutes de Boyoma (anciennement chutes Stanley), les plus grandes chutes d'eau par débit au monde. C'est une ville chargée d'histoire, carrefour de cultures et point de départ pour les explorateurs de la forêt équatoriale.",
-      en: "Located right on the equator, Kisangani is surrounded by the Congolese tropical forest, one of the world's largest and most biodiverse. The city is crossed by the mighty Congo River and is known for the spectacular Boyoma Falls (formerly Stanley Falls), the world's largest waterfalls by flow rate. It is a city steeped in history, a cultural crossroads and a starting point for equatorial forest explorers.",
-    },
-    stats: [
-      { label: { fr: "Habitants", en: "Inhabitants" }, value: "1.2M+" },
-      { label: { fr: "Altitude", en: "Altitude" }, value: "415 m" },
-      { label: { fr: "Latitude", en: "Latitude" }, value: "0° équateur" },
-      { label: { fr: "Chutes", en: "Falls" }, value: "7 cataractes" },
-    ],
-    highlights: [
-      {
-        icon: "Droplet",
-        title: { fr: "Chutes de Boyoma", en: "Boyoma Falls" },
-        description: {
-          fr: "Les 7 cataractes de Boyoma forment les chutes d'eau les plus puissantes du monde par débit. Un spectacle naturel époustouflant.",
-          en: "The 7 cataracts of Boyoma form the world's most powerful waterfalls by flow rate. A breathtaking natural spectacle.",
-        },
-      },
-      {
-        icon: "Trees",
-        title: { fr: "Forêt Équatoriale", en: "Equatorial Forest" },
-        description: {
-          fr: "Excursions dans la forêt vierge pour observer une biodiversité exceptionnelle : bonobos, okapis, centaines d'espèces d'oiseaux.",
-          en: "Excursions into the virgin forest to observe exceptional biodiversity: bonobos, okapis, hundreds of bird species.",
-        },
-      },
-      {
-        icon: "Ship",
-        title: { fr: "Navigation sur le Congo", en: "Congo River Navigation" },
-        description: {
-          fr: "Embarquez sur le fleuve Congo pour une expérience hors du commun, au rythme lent d'un bateau traversant la jungle.",
-          en: "Board the Congo River for an extraordinary experience, at the slow pace of a boat crossing the jungle.",
-        },
-      },
-      {
-        icon: "Bird",
-        title: { fr: "Biodiversité Unique", en: "Unique Biodiversity" },
-        description: {
-          fr: "La région de Kisangani abrite une faune et une flore parmi les plus diversifiées d'Afrique, dont de nombreuses espèces endémiques.",
-          en: "The Kisangani region is home to some of Africa's most diverse fauna and flora, including many endemic species.",
-        },
-      },
-    ],
-    activities: [
-      { fr: "Visite des chutes de Boyoma", en: "Boyoma Falls visit" },
-      { fr: "Excursion en forêt équatoriale", en: "Equatorial forest excursion" },
-      { fr: "Observation des bonobos", en: "Bonobo watching" },
-      { fr: "Croisière sur le Congo", en: "Congo River cruise" },
-      { fr: "Pêche traditionnelle", en: "Traditional fishing" },
-      { fr: "Visite des villages locaux", en: "Local village visit" },
-    ],
-    practicalInfo: {
-      bestTime: {
-        fr: "Juin à Août (saison moins pluvieuse)",
-        en: "June to August (less rainy season)",
-      },
-      climate: {
-        fr: "Équatorial, 24–30°C, pluies fréquentes toute l'année",
-        en: "Equatorial, 24–30°C, frequent rainfall year-round",
-      },
-      howToGetThere: {
-        fr: "Aéroport de Kisangani (FKI), vols depuis Kinshasa",
-        en: "Kisangani Airport (FKI), flights from Kinshasa",
-      },
-      accommodation: {
-        fr: "Hôtels et guesthouses en centre-ville, lodges en forêt",
-        en: "City centre hotels and guesthouses, forest lodges",
-      },
-    },
-    tags: [
-      { fr: "Forêt", en: "Forest" },
-      { fr: "Nature", en: "Nature" },
-      { fr: "Chutes", en: "Falls" },
-      { fr: "Aventure", en: "Adventure" },
-      { fr: "Faune", en: "Wildlife" }
-    ],
-    gallery: [
-      "/images/destinations/ki-1.jpg",
-      "/images/destinations/ki-2.jpg",
-      "/images/destinations/ki-3.jpg",
-      "/images/destinations/ki-4.jpg",
-      "/images/destinations/ki-5.jpg",
-      "/images/destinations/ki-6.jpg",
-      "/images/destinations/ki-7.jpg",
-      "/images/destinations/ki-8.jpg",
-      "/images/destinations/ki-9.jpg"
-    ]
-  },
-  {
-    slug: "lubumbashi",
-    heroImage: "/images/destinations/l-1.jpg",
-    heroGradient: "from-amber-600 via-orange-700 to-red-800",
-    heroIcon: "Pickaxe",
-    name: { fr: "Lubumbashi", en: "Lubumbashi" },
-    tagline: {
-      fr: "La capitale du cuivre, carrefour économique du Sud",
-      en: "The copper capital, economic crossroads of the South",
-    },
-    description: {
-      fr: "Lubumbashi, deuxième ville du pays, est le cœur économique de la RDC. Cette métropole dynamique au bord de la Zambie offre un mélange fascinant d'histoire coloniale, d'industrie minière et de cultures africaines.",
-      en: "Lubumbashi, the country's second city, is the economic heart of the DRC. This dynamic metropolis on the border of Zambia offers a fascinating mix of colonial history, mining industry and African cultures.",
-    },
-    longDescription: {
-      fr: "Fondée en 1910 sous le nom d'Élisabethville, Lubumbashi est le poumon économique de la RDC. Capitale du Haut-Katanga, elle est entourée de mines de cuivre et de cobalt qui alimentent l'économie mondiale. La ville possède une architecture coloniale belge remarquablement préservée, un zoo et un musée régional parmi les plus riches du continent. Sa position frontalière avec la Zambie en fait un carrefour commercial et culturel unique.",
-      en: "Founded in 1910 as Élisabethville, Lubumbashi is the economic lung of the DRC. Capital of Haut-Katanga, it is surrounded by copper and cobalt mines that power the global economy. The city has a remarkably well-preserved Belgian colonial architecture, a zoo and a regional museum among the richest on the continent. Its border position with Zambia makes it a unique commercial and cultural crossroads.",
-    },
-    stats: [
-      { label: { fr: "Habitants", en: "Inhabitants" }, value: "2.5M+" },
-      { label: { fr: "Altitude", en: "Altitude" }, value: "1 208 m" },
-      { label: { fr: "Fondée", en: "Founded" }, value: "1910" },
-      { label: { fr: "Cuivre", en: "Copper" }, value: "Top 5 mondial" },
-    ],
-    highlights: [
-      {
-        icon: "Landmark",
-        title: { fr: "Musée du Katanga", en: "Katanga Museum" },
-        description: {
-          fr: "L'un des musées les plus riches d'Afrique centrale, avec des collections d'art traditionnel, d'objets historiques et minéraux exceptionnels.",
-          en: "One of Central Africa's richest museums, with collections of traditional art, historical objects and exceptional minerals.",
-        },
-      },
-      {
-        icon: "Leaf",
-        title: { fr: "Zoo de Lubumbashi", en: "Lubumbashi Zoo" },
-        description: {
-          fr: "L'un des plus grands zoos d'Afrique subsaharienne, accueillant de nombreuses espèces animales endémiques du Katanga.",
-          en: "One of the largest zoos in sub-Saharan Africa, hosting many animal species endemic to Katanga.",
-        },
-      },
-      {
-        icon: "Building",
-        title: { fr: "Architecture Coloniale", en: "Colonial Architecture" },
-        description: {
-          fr: "Les bâtiments coloniaux belges du centre-ville témoignent d'une histoire fascinante et d'une architecture unique en Afrique.",
-          en: "The Belgian colonial buildings in the city centre bear witness to a fascinating history and architecture unique to Africa.",
-        },
-      },
-      {
-        icon: "ShoppingCart",
-        title: { fr: "Marché Mzee", en: "Mzee Market" },
-        description: {
-          fr: "Le grand marché de Lubumbashi est un festival de couleurs et de saveurs, mêlant cultures congolaises, zambiennes et autres.",
-          en: "Lubumbashi's grand market is a festival of colors and flavors, blending Congolese, Zambian and other cultures.",
-        },
-      },
-    ],
-    activities: [
-      { fr: "Visite du Musée du Katanga", en: "Katanga Museum visit" },
-      { fr: "Tour du Zoo de Lubumbashi", en: "Lubumbashi Zoo tour" },
-      { fr: "Visite des mines de cuivre", en: "Copper mine visit" },
-      { fr: "Exploration architecturale coloniale", en: "Colonial architecture exploration" },
-      { fr: "Excursion aux chutes de Lupopo", en: "Lupopo Falls excursion" },
-      { fr: "Shopping au marché Mzee", en: "Shopping at Mzee Market" },
-    ],
-    practicalInfo: {
-      bestTime: {
-        fr: "Mai à Octobre (saison sèche, températures agréables)",
-        en: "May to October (dry season, pleasant temperatures)",
-      },
-      climate: {
-        fr: "Tropical d'altitude, 20–28°C, hiver frais et sec",
-        en: "High-altitude tropical, 20–28°C, cool dry winter",
-      },
-      howToGetThere: {
-        fr: "Aéroport International de Lubumbashi (FBM), vols depuis Kinshasa, Johannesburg",
-        en: "Lubumbashi International Airport (FBM), flights from Kinshasa, Johannesburg",
-      },
-      accommodation: {
-        fr: "Hôtels 4–5 étoiles, guesthouses, résidences de standing",
-        en: "4–5 star hotels, guesthouses, upscale residences",
-      },
-    },
-    tags: [
-      { fr: "Ville", en: "City" },
-      { fr: "Histoire", en: "History" },
-      { fr: "Industrie", en: "Industry" },
-      { fr: "Culture", en: "Culture" },
-      { fr: "Commerce", en: "Commerce" }
-    ],
-    gallery: [
-      "/images/destinations/l-1.jpg",
-      "/images/destinations/l-2.jpg",
-      "/images/destinations/l-3.jpg",
-      "/images/destinations/l-4.jpg",
-      "/images/destinations/l-5.jpg",
-      "/images/destinations/l-6.jpg",
-      "/images/destinations/l-7.jpg",
-      "/images/destinations/l-8.jpg",
-      "/images/destinations/l-9.jpg"
-    ]
-  },
-  {
-    slug: "salonga",
-    heroImage: "/images/destinations/sa-1.jpg",
-    heroGradient: "from-emerald-700 via-green-800 to-teal-900",
-    heroIcon: "Palmtree",
-    name: { fr: "Parc de la Salonga", en: "Salonga National Park" },
-    tagline: {
-      fr: "La plus grande forêt tropicale protégée d'Afrique",
-      en: "Africa's largest protected tropical forest",
-    },
-    description: {
-      fr: "Le Parc de la Salonga est le plus grand parc tropical d'Afrique, classé au patrimoine mondial de l'UNESCO. Ce sanctuaire immense au cœur du bassin du Congo abrite le bonobo, l'éléphant de forêt et des milliers d'espèces endémiques.",
-      en: "Salonga National Park is Africa's largest tropical park, listed as a UNESCO World Heritage Site. This vast sanctuary in the heart of the Congo Basin is home to the bonobo, forest elephant and thousands of endemic species.",
-    },
-    longDescription: {
-      fr: "Couvrant près de 36 000 km², le Parc National de la Salonga est divisé en deux blocs séparés par une zone tampon. C'est l'un des derniers refuges du bonobo, notre cousin primate le plus proche génétiquement. La forêt primaire intacte, les rivières sinueuses et l'absence presque totale de présence humaine font de ce parc l'un des derniers véritables sanctuaires sauvages de la planète.",
-      en: "Covering nearly 36,000 km², Salonga National Park is divided into two blocks separated by a buffer zone. It is one of the last refuges of the bonobo, our genetically closest primate cousin. The intact primary forest, winding rivers and near-total absence of human presence make this park one of the last true wild sanctuaries on the planet.",
-    },
-    stats: [
-      { label: { fr: "Superficie", en: "Area" }, value: "36 000 km²" },
-      { label: { fr: "Bonobos", en: "Bonobos" }, value: "Milliers" },
-      { label: { fr: "UNESCO", en: "UNESCO" }, value: "1984" },
-      { label: { fr: "Forêt primaire", en: "Primary forest" }, value: "99%" },
-    ],
-    highlights: [
-      {
-        icon: "Binoculars",
-        title: { fr: "Safari Bonobos", en: "Bonobo Safari" },
-        description: {
-          fr: "Observer les bonobos, espèce endémique de la RDC et proche parent de l'homme, dans leur habitat naturel intact.",
-          en: "Observe bonobos, endemic to the DRC and a close relative of humans, in their intact natural habitat.",
-        },
-      },
-      {
-        icon: "Trees",
-        title: { fr: "Forêt Primaire Intacte", en: "Intact Primary Forest" },
-        description: {
-          fr: "L'une des dernières grandes forêts tropicales intactes du monde, avec une canopée de plus de 40 mètres de hauteur.",
-          en: "One of the last great intact tropical forests in the world, with a canopy over 40 meters high.",
-        },
-      },
-      {
-        icon: "Shield",
-        title: { fr: "Faune Rarissime", en: "Rare Wildlife" },
-        description: {
-          fr: "Éléphants de forêt, crocodiles du Congo, paons congolais et de nombreuses espèces endémiques peuplent ce sanctuaire préservé.",
-          en: "Forest elephants, Congo crocodiles, Congo peacocks and many endemic species inhabit this preserved sanctuary.",
-        },
-      },
-      {
-        icon: "Ship",
-        title: { fr: "Navigation Fluviale", en: "River Navigation" },
-        description: {
-          fr: "Explorer le parc en pirogue sur les rivières Salonga, Yenge et Lomela pour une immersion totale dans la jungle.",
-          en: "Explore the park by dugout canoe on the Salonga, Yenge and Lomela rivers for total jungle immersion.",
-        },
-      },
-    ],
-    activities: [
-      { fr: "Observation des bonobos", en: "Bonobo observation" },
-      { fr: "Randonnée en forêt primaire", en: "Primary forest hiking" },
-      { fr: "Navigation en pirogue", en: "Dugout canoe trip" },
-      { fr: "Observation des éléphants", en: "Elephant watching" },
-      { fr: "Ornithologie (700+ espèces)", en: "Birdwatching (700+ species)" },
-      { fr: "Camping en forêt", en: "Forest camping" },
-    ],
-    practicalInfo: {
-      bestTime: {
-        fr: "Juillet à Septembre (saison sèche, accès facilité)",
-        en: "July to September (dry season, easier access)",
-      },
-      climate: {
-        fr: "Équatorial, 24–30°C, humide toute l'année",
-        en: "Equatorial, 24–30°C, humid year-round",
-      },
-      howToGetThere: {
-        fr: "Vol jusqu'à Kinshasa, puis avion charter ou bateau vers le parc (accès limité)",
-        en: "Fly to Kinshasa, then charter plane or boat to the park (limited access)",
-      },
-      accommodation: {
-        fr: "Lodges éco-touristiques, camping encadré par des rangers",
-        en: "Eco-tourism lodges, camping supervised by rangers",
-      },
-    },
-    tags: [
-      { fr: "Forêt", en: "Forest" },
-      { fr: "Bonobos", en: "Bonobos" },
-      { fr: "UNESCO", en: "UNESCO" },
-      { fr: "Nature sauvage", en: "Wild nature" },
-      { fr: "Éco-tourisme", en: "Eco-tourism" }
-    ],
-    gallery: [
-      "/images/destinations/sa-1.jpg",
-      "/images/destinations/sa-2.jpeg",
-      "/images/destinations/sa-3.jpg",
-      "/images/destinations/sa-4.jpg",
-      "/images/destinations/sa-5.jpg",
-      "/images/destinations/sa-6.jpg",
-      "/images/destinations/sa-7.jpg",
-      "/images/destinations/sa-8.jpg"
-    ]
-  },
-  {
-    slug: "kahuzi",
-    heroImage: "/images/destinations/ka-1.jpg",
-    heroGradient: "from-teal-700 via-cyan-800 to-blue-900",
-    heroIcon: "Mountain",
-    name: { fr: "Parc de Kahuzi-Biéga", en: "Kahuzi-Biéga National Park" },
-    tagline: {
-      fr: "Royaume des gorilles des plaines orientales",
-      en: "Kingdom of the eastern lowland gorillas",
-    },
-    description: {
-      fr: "Le Parc National de Kahuzi-Biéga, site du patrimoine mondial UNESCO, est le dernier refuge des gorilles des plaines orientales. Entre volcans éteints et forêts denses du Sud-Kivu, il offre une expérience wildlife unique.",
-      en: "Kahuzi-Biéga National Park, a UNESCO World Heritage Site, is the last refuge of the eastern lowland gorilla. Between extinct volcanoes and dense forests of South Kivu, it offers a unique wildlife experience.",
-    },
-    longDescription: {
-      fr: "Situé à l'ouest de Bukavu dans la région du Sud-Kivu, le Parc de Kahuzi-Biéga s'étend sur 6 000 km² entre forêts de montagne et forêts de basse altitude. Il tire son nom des deux volcans éteints Kahuzi (3 308 m) et Biéga (2 790 m). Ce parc abrite la plus grande population connue de gorilles des plaines orientales (Gorilla beringei graueri), plus grande et moins connue que le gorille de montagne, mais tout aussi fascinante.",
-      en: "Located west of Bukavu in South Kivu, Kahuzi-Biéga Park spans 6,000 km² between mountain forests and lowland forests. It takes its name from the two extinct volcanoes Kahuzi (3,308 m) and Biéga (2,790 m). This park is home to the largest known population of eastern lowland gorillas (Gorilla beringei graueri), larger and less known than the mountain gorilla, but just as fascinating.",
-    },
-    stats: [
-      { label: { fr: "Superficie", en: "Area" }, value: "6 000 km²" },
-      { label: { fr: "Gorilles", en: "Gorillas" }, value: "250+" },
-      { label: { fr: "UNESCO", en: "UNESCO" }, value: "1980" },
-      { label: { fr: "Point culminant", en: "Highest peak" }, value: "3 308 m" },
-    ],
-    highlights: [
-      {
-        icon: "Mountain",
-        title: { fr: "Gorilles des Plaines", en: "Lowland Gorillas" },
-        description: {
-          fr: "Rencontrez les gorilles des plaines orientales, plus grands primates du monde, dans leur habitat naturel.",
-          en: "Meet eastern lowland gorillas, the world's largest primates, in their natural habitat.",
-        },
-      },
-      {
-        icon: "Mountain",
-        title: { fr: "Volcans Kahuzi et Biéga", en: "Kahuzi and Biéga Volcanoes" },
-        description: {
-          fr: "Ascension des volcans éteints Kahuzi et Biéga pour des panoramas spectaculaires sur les forêts et les lacs du Kivu.",
-          en: "Climb the extinct Kahuzi and Biéga volcanoes for spectacular panoramas over the Kivu forests and lakes.",
-        },
-      },
-      {
-        icon: "Leaf",
-        title: { fr: "Forêts de Montagne", en: "Mountain Forests" },
-        description: {
-          fr: "Des forêts à bambous, des forêts de montagne et des zones marécageuses créent une diversité d'habitats exceptionnelle.",
-          en: "Bamboo forests, mountain forests and marshy areas create an exceptional diversity of habitats.",
-        },
-      },
-      {
-        icon: "Bird",
-        title: { fr: "Ornithologie", en: "Birdwatching" },
-        description: {
-          fr: "Plus de 349 espèces d'oiseaux recensées, dont plusieurs endémiques du Rift Albertin.",
-          en: "Over 349 bird species recorded, including several endemic to the Albertine Rift.",
-        },
-      },
-    ],
-    activities: [
-      { fr: "Trekking gorilles des plaines", en: "Lowland gorilla trekking" },
-      { fr: "Ascension du mont Kahuzi", en: "Mount Kahuzi ascent" },
-      { fr: "Randonnée en forêt de montagne", en: "Mountain forest hiking" },
-      { fr: "Observation des oiseaux", en: "Birdwatching" },
-      { fr: "Visite des villages pygmées Batwa", en: "Batwa Pygmy village visit" },
-      { fr: "Safari photo", en: "Photo safari" },
-    ],
-    practicalInfo: {
-      bestTime: {
-        fr: "Juin à Septembre (saison sèche, meilleure accessibilité)",
-        en: "June to September (dry season, best accessibility)",
-      },
-      climate: {
-        fr: "Tropical d'altitude, 15–25°C selon l'altitude",
-        en: "High-altitude tropical, 15–25°C depending on altitude",
-      },
-      howToGetThere: {
-        fr: "Vol jusqu'à Bukavu (BKY), puis transfert vers le parc (30 min)",
-        en: "Fly to Bukavu (BKY), then transfer to the park (30 min)",
-      },
-      accommodation: {
-        fr: "Lodges à l'entrée du parc, hôtels à Bukavu",
-        en: "Lodges at the park entrance, hotels in Bukavu",
-      },
-    },
-    tags: [
-      { fr: "Gorilles", en: "Gorillas" },
-      { fr: "Volcans", en: "Volcanoes" },
-      { fr: "UNESCO", en: "UNESCO" },
-      { fr: "Forêt", en: "Forest" },
-      { fr: "Trekking", en: "Trekking" }
-    ],
-    gallery: [
-      "/images/destinations/ka-1.jpg",
-      "/images/destinations/ka-2.jpg",
-      "/images/destinations/ka-3.jpg",
-      "/images/destinations/ka-4.jpg",
-      "/images/destinations/ka-5.JPG",
-      "/images/destinations/ka-6.jpg",
-      "/images/destinations/ka-7.jpg"
-    ]
-  },
-  {
-    slug: "boyoma",
-    heroImage: "/images/destinations/bo-10.jpg",
-    heroGradient: "from-blue-600 via-indigo-700 to-violet-900",
-    heroIcon: "Droplet",
-    name: { fr: "Chutes de Boyoma", en: "Boyoma Falls" },
-    tagline: {
-      fr: "Les chutes d'eau les plus puissantes du monde",
-      en: "The world's most powerful waterfalls",
-    },
-    description: {
-      fr: "Les chutes de Boyoma (anciennes chutes Stanley) forment un ensemble de 7 cataractes sur le fleuve Congo près de Kisangani. Avec un débit de 17 000 m³/s, elles sont les plus puissantes au monde en volume d'eau.",
-      en: "Boyoma Falls (formerly Stanley Falls) form a series of 7 cataracts on the Congo River near Kisangani. With a flow of 17,000 m³/s, they are the world's most powerful waterfalls by water volume.",
-    },
-    longDescription: {
-      fr: "Étalées sur près de 100 km le long du fleuve Congo, les chutes de Boyoma sont une série de 7 cataractes qui forment ensemble le plus grand débit d'eau au monde — deux fois celui des chutes du Niagara. Nommées d'après l'explorateur Henry Morton Stanley qui les traversa en 1877, elles furent rebaptisées Boyoma en 1966. Ce site spectaculaire est entouré de jungle dense et peuplé d'une faune aquatique et terrestre exceptionnelle.",
-      en: "Stretching over nearly 100 km along the Congo River, Boyoma Falls are a series of 7 cataracts that together form the world's highest water flow — twice that of Niagara Falls. Named after explorer Henry Morton Stanley who crossed them in 1877, they were renamed Boyoma in 1966. This spectacular site is surrounded by dense jungle and populated with exceptional aquatic and terrestrial wildlife.",
-    },
-    stats: [
-      { label: { fr: "Cataractes", en: "Cataracts" }, value: "7" },
-      { label: { fr: "Débit", en: "Flow rate" }, value: "17 000 m³/s" },
-      { label: { fr: "Longueur", en: "Length" }, value: "~100 km" },
-      { label: { fr: "Rang mondial", en: "World ranking" }, value: "#1 débit" },
-    ],
-    highlights: [
-      {
-        icon: "Droplet",
-        title: { fr: "7 Cataractes", en: "7 Cataracts" },
-        description: {
-          fr: "Chaque cataracte est unique et offre un panorama différent sur la puissance brute du fleuve Congo en action.",
-          en: "Each cataract is unique and offers a different panorama of the Congo River's raw power in action.",
-        },
-      },
-      {
-        icon: "Fish",
-        title: { fr: "Pêche Traditionnelle", en: "Traditional Fishing" },
-        description: {
-          fr: "Observer la pêche traditionnelle avec des nasses en vannerie est l'un des spectacles les plus authentiques de la région.",
-          en: "Watching traditional fishing with wicker fish traps is one of the most authentic sights in the region.",
-        },
-      },
-      {
-        icon: "Leaf",
-        title: { fr: "Jungle Environnante", en: "Surrounding Jungle" },
-        description: {
-          fr: "Les forêts denses qui encadrent les chutes abritent une faune riche : singes, oiseaux tropicaux, reptiles et insectes fascinants.",
-          en: "The dense forests flanking the falls are home to rich wildlife: monkeys, tropical birds, reptiles and fascinating insects.",
+          fr: "Admirez la chute vertigineuse de 65 mètres et ressentez la puissance de l'eau pulvérisée.",
+          en: "Admire the dizzying 65-meter drop and feel the power of the spray.",
         },
       },
       {
         icon: "Camera",
-        title: { fr: "Photographie Spectaculaire", en: "Spectacular Photography" },
+        title: { fr: "Points de Vue Panoramiques", en: "Panoramic Viewpoints" },
         description: {
-          fr: "Un paradis pour la photographie de nature et de paysage, avec des lumières matinales particulièrement magiques.",
-          en: "A paradise for nature and landscape photography, with particularly magical morning light.",
+          fr: "Accédez à plusieurs belvédères offrant des perspectives uniques sur les chutes et la forêt.",
+          en: "Access several viewpoints offering unique perspectives on the falls and the forest.",
+        },
+      },
+      {
+        icon: "TreeDeciduous",
+        title: { fr: "Forêt Tropicale", en: "Tropical Forest" },
+        description: {
+          fr: "Une immersion dans une flore dense et préservée, idéale pour l'observation de la biodiversité.",
+          en: "An immersion in dense and preserved flora, ideal for biodiversity observation.",
+        },
+      },
+      {
+        icon: "Tent",
+        title: { fr: "Espaces Détente", en: "Relaxation Areas" },
+        description: {
+          fr: "Des zones aménagées pour le repos, le pique-nique et la contemplation au bord de l'eau.",
+          en: "Areas set up for rest, picnicking, and contemplation by the water.",
         },
       },
     ],
     activities: [
-      { fr: "Visite des 7 cataractes", en: "Visit all 7 cataracts" },
-      { fr: "Observation de la pêche traditionnelle", en: "Traditional fishing observation" },
-      { fr: "Randonnée en forêt riveraine", en: "Riverside forest hiking" },
-      { fr: "Photographie de nature", en: "Nature photography" },
+      { fr: "Randonnée pédestre guidée", en: "Guided hiking" },
+      { fr: "Photographie de paysage et de brume", en: "Landscape and mist photography" },
+      { fr: "Baignade surveillée dans les zones calmes", en: "Supervised swimming in calm areas" },
+      { fr: "Pique-nique en pleine nature", en: "Nature picnic" },
       { fr: "Observation des oiseaux tropicaux", en: "Tropical bird watching" },
-      { fr: "Baignade dans les bassins calmes", en: "Swimming in calm pools" },
+      { fr: "Visite de la centrale hydroélectrique", en: "Hydroelectric power plant visit" },
     ],
     practicalInfo: {
       bestTime: {
-        fr: "Juin à Août (saison sèche, niveaux d'eau optimaux)",
-        en: "June to August (dry season, optimal water levels)",
+        fr: "Saison des pluies pour un débit impressionnant, saison sèche (Juin-Sept) pour un accès plus facile",
+        en: "Rainy season for impressive flow, dry season (June-Sept) for easier access",
       },
       climate: {
-        fr: "Équatorial, 24–30°C, humide avec pluies régulières",
-        en: "Equatorial, 24–30°C, humid with regular rainfall",
+        fr: "Tropical humide, avec une fraîcheur constante à proximité des chutes",
+        en: "Humid tropical, with constant coolness near the falls",
       },
       howToGetThere: {
-        fr: "Via Kisangani (FKI), puis 30 min en véhicule jusqu'aux chutes",
-        en: "Via Kisangani (FKI), then 30 min by vehicle to the falls",
+        fr: "Par la Route Nationale 1, puis piste vers le site (4x4 recommandé en saison des pluies)",
+        en: "Via National Road 1, then a track to the site (4x4 recommended in rainy season)",
       },
       accommodation: {
-        fr: "Guesthouses et hôtels à Kisangani, camping possible",
-        en: "Guesthouses and hotels in Kisangani, camping possible",
+        fr: "Seli Safari Resort (bungalows et chambres) et aires de camping aménagées",
+        en: "Seli Safari Resort (bungalows and rooms) and developed camping areas",
       },
     },
     tags: [
-      { fr: "Chutes", en: "Falls" },
       { fr: "Nature", en: "Nature" },
-      { fr: "Fleuve", en: "River" },
-      { fr: "Aventure", en: "Adventure" },
-      { fr: "Photographie", en: "Photography" }
+      { fr: "Chutes", en: "Falls" },
+      { fr: "Evasion", en: "Escape" }
     ],
-    gallery: [
-      "/images/destinations/bo-1.jpg.webp",
-      "/images/destinations/bo-2.jpg.webp",
-      "/images/destinations/bo-3.jpg.webp",
-      "/images/destinations/bo-4.jpg.webp",
-      "/images/destinations/bo-5.jpg.webp",
-      "/images/destinations/bo-6.jpg.webp",
-      "/images/destinations/bo-7.jpg.webp",
-      "/images/destinations/bo-8.jpg.webp",
-      "/images/destinations/bo-9.jpg.webp",
-      "/images/destinations/bo-10.jpg"
-    ]
+  },
+  {
+    slug: "kisantu",
+    heroImage: "/images/destinations/kisantu.jpg",
+    heroGradient: "from-green-600 via-emerald-700 to-teal-800",
+    heroIcon: "Leaf",
+    name: { fr: "Kisantu", en: "Kisantu" },
+    tagline: {
+      fr: "Un havre de paix et de biodiversité historique",
+      en: "A haven of peace and historic biodiversity",
+    },
+    description: {
+      fr: "Célèbre pour son jardin botanique centenaire et sa majestueuse cathédrale en briques rouges, Kisantu est une oasis de paix et de biodiversité nichée au cœur du Kongo Central.",
+      en: "Famous for its century-old botanical garden and its majestic red brick cathedral, Kisantu is an oasis of peace and biodiversity nestled in the heart of Kongo Central.",
+    },
+    longDescription: {
+      fr: "À seulement 120 km de Kinshasa, Kisantu offre un voyage dans le temps et dans la nature. Le Jardin Botanique de Kisantu, fondé en 1900 par le frère jésuite Justin Gillet, est l'un des plus anciens d'Afrique. Il abrite sur 225 hectares une collection exceptionnelle de plus de 3 000 espèces végétales, dont des serres de cactus, des collections de palmiers et des arbres centenaires impressionnants. La ville est également célèbre pour sa Cathédrale Notre-Dame des Sept Douleurs, un chef-d'œuvre architectural en briques rouges visible de loin. Entre balades sous les frondaisons, découverte du patrimoine historique et dégustation des produits locaux, Kisantu est l'étape culturelle et naturelle par excellence du Bas-Congo.",
+      en: "Just 120 km from Kinshasa, Kisantu offers a journey through time and nature. The Kisantu Botanical Garden, founded in 1900 by Jesuit Brother Justin Gillet, is one of the oldest in Africa. Spread over 225 hectares, it houses an exceptional collection of over 3,000 plant species, including cactus greenhouses, palm collections, and impressive century-old trees. The town is also famous for its Cathedral of Our Lady of Seven Sorrows, a red-brick architectural masterpiece visible from afar. Between strolls under the canopies, discovery of historical heritage, and tasting local products, Kisantu is the quintessential cultural and natural stop in Bas-Congo.",
+    },
+    stats: [
+      { label: { fr: "Distance de Kin", en: "Distance from Kin" }, value: "120 km" },
+      { label: { fr: "Fondation du jardin", en: "Garden Founded" }, value: "1900" },
+      { label: { fr: "Espèces végétales", en: "Plant Species" }, value: "3000+" },
+      { label: { fr: "Superficie du jardin", en: "Garden Area" }, value: "225 ha" },
+    ],
+    highlights: [
+      {
+        icon: "TreeDeciduous",
+        title: { fr: "Jardin Botanique", en: "Botanical Garden" },
+        description: {
+          fr: "Une collection unique d'arbres tropicaux, de plantes médicinales et de fleurs exotiques dans un cadre historique.",
+          en: "A unique collection of tropical trees, medicinal plants, and exotic flowers in a historic setting.",
+        },
+      },
+      {
+        icon: "Church",
+        title: { fr: "Cathédrale en Briques", en: "Red Brick Cathedral" },
+        description: {
+          fr: "L'imposante Cathédrale Notre-Dame des Sept Douleurs, symbole de l'architecture coloniale religieuse.",
+          en: "The imposing Cathedral of Our Lady of Seven Sorrows, a symbol of religious colonial architecture.",
+        },
+      },
+      {
+        icon: "Leaf",
+        title: { fr: "Serres de Cactus", en: "Cactus Greenhouses" },
+        description: {
+          fr: "Découvrez une variété impressionnante de plantes grasses et succulentes dans des serres magnifiquement préservées.",
+          en: "Discover an impressive variety of succulents and cacti in beautifully preserved greenhouses.",
+        },
+      },
+      {
+        icon: "Waves",
+        title: { fr: "La Rivière Inkisi", en: "Inkisi River" },
+        description: {
+          fr: "Profitez du calme des berges de la rivière Inkisi qui traverse la région et nourrit cette terre fertile.",
+          en: "Enjoy the calm of the banks of the Inkisi River that flows through the region and nourishes this fertile land.",
+        },
+      },
+    ],
+    activities: [
+      { fr: "Visite guidée du jardin botanique", en: "Guided botanical garden tour" },
+      { fr: "Exploration de la cathédrale historique", en: "Historic cathedral exploration" },
+      { fr: "Pique-nique sous les arbres centenaires", en: "Picnic under century-old trees" },
+      { fr: "Photographie de flore et d'architecture", en: "Flora and architecture photography" },
+      { fr: "Achat de miel et confitures locales", en: "Buying local honey and jams" },
+      { fr: "Randonnée le long de l'Inkisi", en: "Hiking along the Inkisi" },
+    ],
+    practicalInfo: {
+      bestTime: {
+        fr: "Toute l'année, mais particulièrement agréable pendant la saison sèche (Mai à Septembre)",
+        en: "Year-round, but particularly pleasant during the dry season (May to September)",
+      },
+      climate: {
+        fr: "Tropical avec une fraîcheur agréable à l'ombre des grands arbres du jardin",
+        en: "Tropical with a pleasant coolness under the shade of the garden's large trees",
+      },
+      howToGetThere: {
+        fr: "Par la Route Nationale 1 (environ 2-3 heures de route depuis Kinshasa)",
+        en: "Via National Road 1 (about 2-3 hours drive from Kinshasa)",
+      },
+      accommodation: {
+        fr: "Centre d'accueil du jardin, petits hôtels locaux et lodges de charme dans les environs",
+        en: "Garden guest center, small local hotels, and charming lodges in the surroundings",
+      },
+    },
+    tags: [
+      { fr: "Botanique", en: "Botany" },
+      { fr: "Histoire", en: "History" },
+      { fr: "Culture", en: "Culture" }
+    ],
+  },
+  {
+    slug: "moanda",
+    heroImage: "/images/destinations/moanda.jpg",
+    heroGradient: "from-blue-500 via-indigo-600 to-purple-800",
+    heroIcon: "Palmtree",
+    name: { fr: "Moanda", en: "Moanda" },
+    tagline: {
+      fr: "L'ouverture de la RDC sur l'Océan Atlantique",
+      en: "DRC's gateway to the Atlantic Ocean",
+    },
+    description: {
+      fr: "Seule ville côtière de la République Démocratique du Congo, Moanda est un joyau balnéaire où le fleuve Congo rencontre l'océan Atlantique. Plages de sable fin, mangroves mystérieuses et couchers de soleil spectaculaires vous y attendent.",
+      en: "The only coastal city in the Democratic Republic of Congo, Moanda is a seaside jewel where the Congo River meets the Atlantic Ocean. Fine sandy beaches, mysterious mangroves, and spectacular sunsets await you.",
+    },
+    longDescription: {
+      fr: "Située à la pointe ouest de la RDC, Moanda offre une expérience unique de détente et de découverte. C'est ici que le deuxième plus puissant fleuve du monde termine sa course dans l'Atlantique, créant un phénomène naturel saisissant. La ville est bordée par le Parc Marin des Mangroves, un sanctuaire de biodiversité où l'on peut observer des lamantins, des tortues marines et une multitude d'oiseaux tropicaux. Entre les plages de Tonde, le port historique de Banana et les balades en pirogue dans les canaux bordés de palétuviers, Moanda est la destination idéale pour ceux qui cherchent à allier nature sauvage et plaisirs balnéaires.",
+      en: "Located at the western tip of the DRC, Moanda offers a unique experience of relaxation and discovery. It is here that the world's second most powerful river ends its journey in the Atlantic, creating a striking natural phenomenon. The city is bordered by the Mangrove Marine Park, a biodiversity sanctuary where one can observe manatees, sea turtles, and a multitude of tropical birds. Between the beaches of Tonde, the historic port of Banana, and canoe trips through mangrove-lined canals, Moanda is the ideal destination for those seeking to combine wild nature and seaside pleasures.",
+    },
+    stats: [
+      { label: { fr: "Littoral", en: "Coastline" }, value: "37 km" },
+      { label: { fr: "Température moyenne", en: "Average Temp" }, value: "28°C" },
+      { label: { fr: "Fondation", en: "Founded" }, value: "1905" },
+      { label: { fr: "Type de climat", en: "Climate Type" }, value: "Tropical Maritime" },
+    ],
+    highlights: [
+      {
+        icon: "Waves",
+        title: { fr: "Embouchure du Fleuve", en: "River Mouth" },
+        description: {
+          fr: "Le spectacle unique de la rencontre entre les eaux brunes du fleuve Congo et le bleu de l'océan Atlantique.",
+          en: "The unique spectacle of the meeting between the brown waters of the Congo River and the blue of the Atlantic Ocean.",
+        },
+      },
+      {
+        icon: "Bird",
+        title: { fr: "Parc Marin des Mangroves", en: "Mangrove Marine Park" },
+        description: {
+          fr: "Explorez un écosystème protégé abritant des lamantins, des crocodiles et une flore aquatique exceptionnelle.",
+          en: "Explore a protected ecosystem home to manatees, crocodiles, and exceptional aquatic flora.",
+        },
+      },
+      {
+        icon: "Sun",
+        title: { fr: "Plages de Tonde", en: "Tonde Beaches" },
+        description: {
+          fr: "Profitez du soleil et de la brise marine sur les plus belles plages de sable fin du pays.",
+          en: "Enjoy the sun and the sea breeze on the most beautiful fine sandy beaches in the country.",
+        },
+      },
+      {
+        icon: "Anchor",
+        title: { fr: "Port de Banana", en: "Banana Port" },
+        description: {
+          fr: "Visitez le port historique de Banana, l'un des points les plus anciens de la côte congolaise.",
+          en: "Visit the historic port of Banana, one of the oldest points on the Congolese coast.",
+        },
+      },
+    ],
+    activities: [
+      { fr: "Baignade et sports nautiques", en: "Swimming and water sports" },
+      { fr: "Safari en bateau dans les mangroves", en: "Boat safari in the mangroves" },
+      { fr: "Observation des oiseaux tropicaux", en: "Tropical bird watching" },
+      { fr: "Pêche sportive en haute mer", en: "Deep-sea sport fishing" },
+      { fr: "Dégustation de fruits de mer frais", en: "Fresh seafood tasting" },
+      { fr: "Visite du phare de Banana", en: "Banana lighthouse visit" },
+    ],
+    practicalInfo: {
+      bestTime: {
+        fr: "Juin à Septembre (saison sèche et fraîche) ou Décembre à Février",
+        en: "June to September (dry and cool season) or December to February",
+      },
+      climate: {
+        fr: "Maritime tropical avec une humidité tempérée par la brise marine",
+        en: "Maritime tropical with humidity tempered by the sea breeze",
+      },
+      howToGetThere: {
+        fr: "Vols réguliers depuis Kinshasa (Congo Airways/CAA) ou par la route via Matadi (environ 8-10h)",
+        en: "Regular flights from Kinshasa (Congo Airways/CAA) or by road via Matadi (about 8-10h)",
+      },
+      accommodation: {
+        fr: "Hôtels de standing en bord de mer, résidences de vacances et gîtes écologiques",
+        en: "Upscale seaside hotels, holiday residences, and ecological lodges",
+      },
+    },
+    tags: [
+      { fr: "Plage", en: "Beach" },
+      { fr: "Océan", en: "Ocean" },
+      { fr: "Nature", en: "Nature" }
+    ],
+  },
+  {
+    slug: "matadi",
+    heroImage: "/images/destinations/matadi.jpg",
+    heroGradient: "from-slate-600 via-gray-700 to-zinc-900",
+    heroIcon: "Ship",
+    name: { fr: "Matadi", en: "Matadi" },
+    tagline: {
+      fr: "La cité rocheuse et le poumon portuaire du pays",
+      en: "The rocky city and the country's port lung",
+    },
+    description: {
+      fr: "Surnommée la 'Cité de Pierre', Matadi est le poumon économique de la RDC. Bâtie à flanc de colline, cette ville portuaire impressionne par son relief escarpé et son célèbre pont suspendu.",
+      en: "Nicknamed the 'City of Stone', Matadi is the economic heart of the DRC. Built on a hillside, this port city impresses with its steep terrain and its famous suspension bridge.",
+    },
+    longDescription: {
+      fr: "Matadi, dont le nom signifie 'pierres' en Kikongo, est une ville au caractère unique, sculptée dans un paysage de collines rocheuses dominant le fleuve Congo. En tant que principal port maritime du pays, elle est le théâtre d'une activité incessante. Le symbole incontesté de la ville est le Pont Maréchal (Pont OEBK), une prouesse d'ingénierie suspendue à 50 mètres au-dessus du fleuve, offrant une vue imprenable sur les rapides et le port. Les visiteurs apprécient particulièrement les belvédères qui parsèment la ville, offrant des panoramas spectaculaires, ainsi que les traces de l'histoire coloniale visibles dans l'architecture de la 'Ville Haute'. C'est une étape dynamique et impressionnante pour comprendre l'énergie du Kongo Central.",
+      en: "Matadi, whose name means 'stones' in Kikongo, is a city with a unique character, sculpted in a landscape of rocky hills overlooking the Congo River. As the country's main seaport, it is the scene of constant activity. The undisputed symbol of the city is the Marechal Bridge (OEBK Bridge), an engineering feat suspended 50 meters above the river, offering a breathtaking view of the rapids and the port. Visitors particularly appreciate the viewpoints that dot the city, offering spectacular panoramas, as well as the traces of colonial history visible in the architecture of the 'Upper Town'. It is a dynamic and impressive stop to understand the energy of Kongo Central.",
+    },
+    stats: [
+      { label: { fr: "Altitude", en: "Altitude" }, value: "300 m" },
+      { label: { fr: "Capacité portuaire", en: "Port Capacity" }, value: "#1 RDC" },
+      { label: { fr: "Longueur du pont", en: "Bridge Length" }, value: "722 m" },
+      { label: { fr: "Population", en: "Population" }, value: "300k+" },
+    ],
+    highlights: [
+      {
+        icon: "Bridge",
+        title: { fr: "Pont Maréchal", en: "Marechal Bridge" },
+        description: {
+          fr: "L'unique pont suspendu enjambant le fleuve Congo, une structure majestueuse reliant les deux rives.",
+          en: "The only suspension bridge spanning the Congo River, a majestic structure connecting the two banks.",
+        },
+      },
+      {
+        icon: "Anchor",
+        title: { fr: "Le Port Maritime", en: "The Seaport" },
+        description: {
+          fr: "Le cœur battant de l'économie congolaise, où les navires du monde entier viennent accoster.",
+          en: "The beating heart of the Congolese economy, where ships from all over the world come to dock.",
+        },
+      },
+      {
+        icon: "Mountain",
+        title: { fr: "Les Belvédères", en: "Viewpoints" },
+        description: {
+          fr: "Des points de vue naturels offrant des panoramas à couper le souffle sur le fleuve et la ville escarpée.",
+          en: "Natural viewpoints offering breathtaking panoramas over the river and the steep city.",
+        },
+      },
+      {
+        icon: "History",
+        title: { fr: "La Ville Haute", en: "Upper Town" },
+        description: {
+          fr: "Le quartier historique avec ses bâtiments coloniaux et son ambiance rétro dominant le port.",
+          en: "The historic district with its colonial buildings and retro atmosphere overlooking the port.",
+        },
+      },
+    ],
+    activities: [
+      { fr: "Traversée à pied du Pont Maréchal", en: "Walking across the Marechal Bridge" },
+      { fr: "Tour panoramique des belvédères", en: "Panoramic tour of the viewpoints" },
+      { fr: "Visite guidée du port de Matadi", en: "Guided tour of the Matadi port" },
+      { fr: "Exploration des grottes de Lufu", en: "Exploration of Lufu caves" },
+      { fr: "Dîner avec vue sur le fleuve", en: "Dinner with a view of the river" },
+      { fr: "Découverte du site historique de Vivi", en: "Discovery of Vivi historical site" },
+    ],
+    practicalInfo: {
+      bestTime: {
+        fr: "Saison sèche (Mai à Septembre) pour éviter les fortes pluies et profiter de la visibilité",
+        en: "Dry season (May to September) to avoid heavy rains and enjoy good visibility",
+      },
+      climate: {
+        fr: "Chaud et humide, avec une brise agréable sur les hauteurs de la ville",
+        en: "Hot and humid, with a pleasant breeze on the city heights",
+      },
+      howToGetThere: {
+        fr: "Par la Route Nationale 1 (environ 5-6h de route de Kinshasa) ou par train (Ligne Matadi-Kinshasa)",
+        en: "Via National Road 1 (about 5-6h drive from Kinshasa) or by train (Matadi-Kinshasa Line)",
+      },
+      accommodation: {
+        fr: "Hôtels de grand standing (Ledya, Belle-Vue) et nombreux guest-houses confortables",
+        en: "Luxury hotels (Ledya, Belle-Vue) and many comfortable guest houses",
+      },
+    },
+    tags: [
+      { fr: "Port", en: "Port" },
+      { fr: "Commerce", en: "Commerce" },
+      { fr: "Architecture", en: "Architecture" }
+    ],
+  },
+  {
+    slug: "nsele",
+    heroImage: "/images/destinations/nsele.jpg",
+    heroGradient: "from-rose-500 via-pink-600 to-orange-700",
+    heroIcon: "Binoculars",
+    name: { fr: "Parc de la N'Sele", en: "N'Sele Park" },
+    tagline: {
+      fr: "Safari et détente aux portes de la capitale",
+      en: "Safari and relaxation at the gates of the capital",
+    },
+    description: {
+      fr: "Le Parc de la Vallée de la N'Sele est un sanctuaire de biodiversité aux portes de Kinshasa. Safari, détente et activités fluviales vous y attendent pour une évasion familiale parfaite.",
+      en: "The N'Sele Valley Park is a biodiversity sanctuary at the gates of Kinshasa. Safari, relaxation, and river activities await you for a perfect family getaway.",
+    },
+    longDescription: {
+      fr: "Situé à seulement une heure de route du centre-ville de Kinshasa, le Parc de la Vallée de la N'Sele est la destination idéale pour ceux qui souhaitent découvrir la faune africaine sans s'éloigner de la capitale. Sur des milliers d'hectares préservés, vous pourrez observer des lions, des zèbres, des girafes, des buffles et diverses espèces d'antilopes lors de safaris guidés en jeep. Le parc ne se limite pas à la faune terrestre : bordé par la rivière N'Sele et proche du fleuve Congo, il offre des panoramas apaisants et des activités nautiques. Avec ses infrastructures modernes, ses piscines et ses restaurants de qualité, c'est le lieu de prédilection des familles kinoises et des visiteurs pour un week-end alliant aventure et confort en plein air.",
+      en: "Located just an hour's drive from downtown Kinshasa, the N'Sele Valley Park is the ideal destination for those wishing to discover African wildlife without straying far from the capital. Across thousands of preserved hectares, you can observe lions, zebras, giraffes, buffaloes, and various species of antelopes during guided jeep safaris. The park is not limited to land wildlife: bordered by the N'Sele River and close to the Congo River, it offers soothing panoramas and water activities. With its modern infrastructure, swimming pools, and quality restaurants, it is the favorite spot for Kinshasa families and visitors for a weekend combining adventure and outdoor comfort.",
+    },
+    stats: [
+      { label: { fr: "Distance de Kin", en: "Distance from Kin" }, value: "40 km" },
+      { label: { fr: "Superficie", en: "Area" }, value: "10 000 ha" },
+      { label: { fr: "Espèces animales", en: "Animal Species" }, value: "20+" },
+      { label: { fr: "Temps de trajet", en: "Travel Time" }, value: "1h" },
+    ],
+    highlights: [
+      {
+        icon: "Lion",
+        title: { fr: "Safari en Jeep", en: "Jeep Safari" },
+        description: {
+          fr: "Parcourez les pistes du parc pour observer les grands fauves et les mammifères de la savane.",
+          en: "Travel the park's tracks to observe large predators and savannah mammals.",
+        },
+      },
+      {
+        icon: "Waves",
+        title: { fr: "Activités Fluviales", en: "River Activities" },
+        description: {
+          fr: "Profitez de balades en bateau ou de moments de détente sur les rives de la N'Sele.",
+          en: "Enjoy boat rides or moments of relaxation on the banks of the N'Sele.",
+        },
+      },
+      {
+        icon: "Binoculars",
+        title: { fr: "Observation de la Faune", en: "Wildlife Watching" },
+        description: {
+          fr: "Approchez des girafes, des zèbres et des impalas dans leur habitat naturel protégé.",
+          en: "Get close to giraffes, zebras, and impalas in their protected natural habitat.",
+        },
+      },
+      {
+        icon: "Coffee",
+        title: { fr: "Loisirs & Détente", en: "Leisure & Relaxation" },
+        description: {
+          fr: "Des espaces de restauration et des piscines pour une journée de repos complète en famille.",
+          en: "Dining areas and swimming pools for a complete family day of rest.",
+        },
+      },
+    ],
+    activities: [
+      { fr: "Safari guidé en véhicule tout-terrain", en: "Guided 4x4 safari" },
+      { fr: "Baignade en piscine de luxe", en: "Swimming in luxury pools" },
+      { fr: "Croisière sur la rivière N'Sele", en: "N'Sele river cruise" },
+      { fr: "Randonnée pédestre naturaliste", en: "Nature hiking" },
+      { fr: "Déjeuner gastronomique en plein air", en: "Outdoor gourmet lunch" },
+      { fr: "VTT et activités sportives", en: "Mountain biking and sports" },
+    ],
+    practicalInfo: {
+      bestTime: {
+        fr: "Toute l'année, particulièrement les week-ends pour l'animation ou en semaine pour le calme",
+        en: "Year-round, especially weekends for the atmosphere or weekdays for peace",
+      },
+      climate: {
+        fr: "Tropical, souvent plus aéré que le centre-ville grâce à la proximité de l'eau et de la végétation",
+        en: "Tropical, often airier than downtown thanks to proximity to water and vegetation",
+      },
+      howToGetThere: {
+        fr: "Par la route vers l'Est (boulevard Lumumba), direction l'aéroport international",
+        en: "By road towards the East (Lumumba Boulevard), heading towards the international airport",
+      },
+      accommodation: {
+        fr: "Kwilu Lodge, lodges de luxe du parc et diverses options de standing à proximité",
+        en: "Kwilu Lodge, park luxury lodges, and various upscale options nearby",
+      },
+    },
+    tags: [
+      { fr: "Safari", en: "Safari" },
+      { fr: "Famille", en: "Family" },
+      { fr: "Weekend", en: "Weekend" }
+    ],
   },
 ];
 
-export function getDestinationBySlug(slug: string): DestinationData | undefined {
+export const getDestinationBySlug = (slug: string) => {
   return destinations.find((d) => d.slug === slug);
-}
+};

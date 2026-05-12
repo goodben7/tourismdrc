@@ -30,9 +30,11 @@ export default function Footer() {
   const footerNavigation = {
     destinations: [
       { name: "Kinshasa", href: `${ROUTES.destinations}/kinshasa` },
-      { name: "Virunga", href: `${ROUTES.destinations}/virunga` },
-      { name: t('footer.dest_lacKivu'), href: `${ROUTES.destinations}/lac-kivu` },
-      { name: "Kisangani", href: `${ROUTES.destinations}/kisangani` },
+      { name: "Zongo", href: `${ROUTES.destinations}/zongo` },
+      { name: "Kisantu", href: `${ROUTES.destinations}/kisantu` },
+      { name: "Moanda", href: `${ROUTES.destinations}/moanda` },
+      { name: "Matadi", href: `${ROUTES.destinations}/matadi` },
+      { name: "N'Sele", href: `${ROUTES.destinations}/nsele` },
     ],
     services: [
       { name: t('footer.svc_travel'), href: `${ROUTES.services}#airport` },

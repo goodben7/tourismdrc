@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Accueil",
-    "destinations": "Destinations",
+    "destinations": "Découvrir",
     "experiences": "Forfaits",
     "services": "Services",
     "about": "À Propos",
@@ -14,7 +14,7 @@
     "slide1": {
       "title": "Découvrez la Beauté de la RDC",
       "subtitle": "Explorez des paysages à couper le souffle et une culture riche",
-      "cta": "Nos Destinations"
+      "cta": "Découvrir"
     },
     "slide2": {
       "title": "Aventures Inoubliables",
@@ -121,20 +121,16 @@
       "nature": "Nature & Parcs",
       "kinshasa": "Kinshasa",
       "kinshasa_desc": "La capitale dynamique",
-      "lubumbashi": "Lubumbashi",
-      "lubumbashi_desc": "Capitale minière",
-      "goma": "Goma",
-      "goma_desc": "Porte des volcans",
-      "kisangani": "Kisangani",
-      "kisangani_desc": "Perle de l'Orientale",
-      "virunga": "Parc des Virunga",
-      "virunga_desc": "Gorilles de montagne",
-      "salonga": "Parc de la Salonga",
-      "salonga_desc": "Forêt tropicale",
-      "kahuzi": "Parc de Kahuzi-Biéga",
-      "kahuzi_desc": "Gorilles des plaines",
-      "boyoma": "Chutes de Boyoma",
-      "boyoma_desc": "Cascades spectaculaires",
+      "zongo": "Zongo",
+      "zongo_desc": "Chutes spectaculaires",
+      "kisantu": "Kisantu",
+      "kisantu_desc": "Jardin botanique historique",
+      "moanda": "Moanda",
+      "moanda_desc": "Seule ville côtière de la RDC",
+      "matadi": "Matadi",
+      "matadi_desc": "Ville portuaire et pont OEBK",
+      "nsele": "Parc de la N'Sele",
+      "nsele_desc": "Safari et détente aux portes de la ville",
       "featured": "À Découvrir",
       "featured1_title": "Découvrez Virunga",
       "featured1_desc": "Le plus ancien parc d'Afrique",
@@ -186,7 +182,7 @@
   },
   "footer": {
     "description": "Découvrez la beauté et la richesse de la République Démocratique du Congo. Voyages authentiques, expériences inoubliables.",
-    "destinations": "Destinations",
+    "destinations": "Découvrir",
     "services": "Services",
     "company": "Entreprise",
     "dest_lacKivu": "Lac Kivu",
@@ -367,7 +363,7 @@
     "ctaBadge": "Réponse en moins de 24h"
   },
   "destinations_page": {
-    "heroTitle": "Nos Destinations",
+    "heroTitle": "Découvrir",
     "heroSubtitle": "Explorez les merveilles naturelles et culturelles de la RDC",
     "comingSoonTitle": "Destinations Bientôt Disponibles",
     "comingSoonText": "Nous préparons une sélection exceptionnelle de destinations à travers la RDC. Contactez-nous pour plus d'informations sur nos circuits disponibles."

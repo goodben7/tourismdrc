@@ -11,7 +11,6 @@ import {
   Plane,
   Calendar,
   Users,
-  MapPin,
   DollarSign,
   MessageSquare,
   ChevronRight,
@@ -330,18 +329,7 @@ export default function BookingPage() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6">
-                      <div className="relative">
-                        <Input
-                          label={t('booking_page.destination')}
-                          name="destination"
-                          value={formData.destination}
-                          readOnly
-                          placeholder={t('booking_page.destinationPlaceholder')}
-                        />
-                        <MapPin className="absolute right-4 top-[42px] w-4 h-4 text-slate-400 pointer-events-none" />
-                      </div>
-                      <div className="col-span-2 relative">
+                    <div className="relative">
                         <Input
                           label={t('home.duration')}
                           name="duration_display"
@@ -350,7 +338,6 @@ export default function BookingPage() {
                         />
                         <Clock className="absolute right-4 top-[42px] w-4 h-4 text-slate-400 pointer-events-none" />
                       </div>
-                    </div>
                   </div>
 
                   {/* Message & Submit */}

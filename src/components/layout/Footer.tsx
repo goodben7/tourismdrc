@@ -17,9 +17,21 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    stroke="none"
+  >
+    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.81-.73-3.89-1.74V14.5c.01 1.9-.6 3.82-1.93 5.17-1.44 1.48-3.59 2.22-5.64 1.99-2.01-.22-3.86-1.57-4.75-3.38-.97-2-1-4.4-.1-6.42.82-1.89 2.59-3.36 4.63-3.75V12.2c-1.01.2-1.92.83-2.39 1.73-.48.91-.5 2.01-.06 2.92.41.87 1.25 1.51 2.2 1.68 1.05.21 2.21-.1 2.91-.91.68-.8.85-1.94.81-2.95V.02z" />
+  </svg>
+);
+
 const socialLinks = [
   { name: "Facebook", icon: Facebook, href: SOCIAL_LINKS.facebook },
   { name: "Instagram", icon: Instagram, href: SOCIAL_LINKS.instagram },
+  { name: "TikTok", icon: TikTokIcon, href: SOCIAL_LINKS.tiktok },
   { name: "WhatsApp", icon: WhatsAppIcon, href: `https://wa.me/${CONTACT.whatsapp.replace('+', '')}` },
 ];
 

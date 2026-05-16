@@ -15,10 +15,9 @@ export const CONTACT = {
 } as const;
 
 export const SOCIAL_LINKS = {
-  facebook: "https://facebook.com/tourismdrc",
-  instagram: "https://instagram.com/tourismdrc",
-  twitter: "https://twitter.com/tourismdrc",
-  youtube: "https://youtube.com/@tourismdrc",
+  facebook: "https://www.facebook.com/share/18E5oFBKS8/",
+  instagram: "https://www.instagram.com/tourismdrc?igsh=MXRvaGQwbDd6YjBhb",
+  tiktok: "https://www.tiktok.com/@tourismdrc?_r=1&_t=ZS-95Woz5rYotD",
 } as const;
 
 export const LOCALES = ["fr", "en"] as const;

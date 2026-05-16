@@ -269,7 +269,7 @@ export default function PackagesPage() {
                     <div className="h-px flex-grow bg-slate-100" />
                   </div>
                   <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => {
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((num) => {
                       const content = t(`${selectedPkg.key}.item${num}`);
                       if (content.includes('.item')) return null;
                       return (

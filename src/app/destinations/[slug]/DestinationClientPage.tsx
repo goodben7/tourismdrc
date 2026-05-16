@@ -175,15 +175,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
                   ))}
                 </ul>
 
-                <div className="pt-8 border-t border-slate-200">
-                  <Link
-                    href={ROUTES.booking}
-                    className="group flex items-center justify-center gap-3 w-full bg-slate-900 hover:bg-slate-800 text-white px-6 py-4 rounded-xl font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-300 shadow-lg shadow-slate-900/20"
-                  >
-                    {t('nav.getQuote')}
-                    <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+                {/* Bouton de réservation supprimé */}
               </div>
             </div>
           </div>
@@ -360,16 +352,6 @@ export default function DestinationPage({ params }: DestinationPageProps) {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center pt-10">
-                  <Link
-                    href={ROUTES.booking}
-                    className="relative inline-flex items-center justify-center gap-3 bg-primary-600 hover:bg-primary-500 text-white px-10 py-5 rounded-full font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-500 transform hover:-translate-y-1 shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:shadow-[0_0_60px_rgba(59,130,246,0.6)]"
-                  >
-                    <span className="relative z-10 flex items-center gap-3">
-                      {t('nav.getQuote')}
-                      <ArrowRight className="h-4 w-4" />
-                    </span>
-                  </Link>
-
                   <Link
                     href={ROUTES.destinations}
                     className="group inline-flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 backdrop-blur-md text-slate-300 hover:text-white border border-white/10 hover:border-white/30 px-10 py-5 rounded-full font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-300 transform hover:-translate-y-1"

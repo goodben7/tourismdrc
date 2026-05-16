@@ -18,7 +18,7 @@ export const sendBookingConfirmationEmail = async ({
   budget: string;
 }) => {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  const logoUrl = `${appUrl}/logo1.jpeg`;
+  const logoUrl = `${appUrl}/logo.jpeg`;
 
   try {
     const { data, error } = await resend.emails.send({

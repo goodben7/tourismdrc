@@ -191,6 +191,9 @@ export default function AboutPage() {
           >
             {whatWeOffer.map((offer, i) => {
               const Icon = offer.icon;
+              // On récupère la clé de description correspondante (ex: about.offer1_desc)
+              const descKey = offer.key.replace('about_page.', 'about.') + '_desc';
+              
               return (
                 <motion.div
                   key={i}
@@ -198,33 +201,33 @@ export default function AboutPage() {
                     hidden: { opacity: 0, y: 30 },
                     show: { opacity: 1, y: 0 }
                   }}
-                  className={`group relative p-8 rounded-[2rem] border transition-all duration-500 overflow-hidden flex flex-col h-full ${offer.highlight
-                    ? 'bg-sky-500/5 border-sky-500/30'
-                    : 'bg-white/5 border-white/10 hover:bg-white/[0.08] hover:border-white/20'
-                    }`}
+                  className={`relative p-8 rounded-[2.5rem] border overflow-hidden flex flex-col h-full transition-colors duration-500 ${
+                    offer.highlight
+                      ? 'bg-gradient-to-br from-sky-500/10 to-transparent border-sky-500/20'
+                      : 'bg-white/[0.03] border-white/10'
+                  }`}
                 >
-                  {/* Hover Glow Effect */}
-                  <div className="absolute -inset-24 bg-primary-500/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  {/* Subtle Background Icon Decoration (Static) */}
+                  <Icon className="absolute -bottom-6 -right-6 w-32 h-32 text-white/[0.03] -rotate-12 pointer-events-none" />
 
-                  <div className="relative z-10">
-                    <div className={`mb-8 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-500 shadow-lg ${offer.highlight
-                      ? 'bg-sky-500/20 text-sky-400 group-hover:bg-sky-500 group-hover:text-white'
-                      : 'bg-white/5 text-slate-400 group-hover:bg-primary-500 group-hover:text-white group-hover:scale-110 group-hover:rotate-3'
-                      }`}>
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className={`mb-6 w-14 h-14 rounded-2xl flex items-center justify-center shadow-2xl ${
+                      offer.highlight
+                        ? 'bg-sky-500 text-white'
+                        : 'bg-white/5 text-primary-400 border border-white/10'
+                    }`}>
                       <Icon strokeWidth={1.5} className="w-6 h-6" />
                     </div>
 
-                    <h3 className={`text-xl md:text-2xl font-bold tracking-tight leading-tight transition-colors duration-300 ${offer.highlight
-                      ? 'text-sky-400 group-hover:text-sky-300'
-                      : 'text-white group-hover:text-primary-400'
-                      }`}>
+                    <h3 className={`text-xl font-black tracking-tight mb-4 leading-tight ${
+                      offer.highlight ? 'text-sky-400' : 'text-white'
+                    }`}>
                       {t(offer.key)}
                     </h3>
-                  </div>
 
-                  {/* Decorative corner element */}
-                  <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-10 transition-opacity">
-                    <Icon className="w-16 h-16 grayscale" />
+                    <p className="text-slate-400 text-sm md:text-base font-light leading-relaxed">
+                      {t(descKey)}
+                    </p>
                   </div>
                 </motion.div>
               );

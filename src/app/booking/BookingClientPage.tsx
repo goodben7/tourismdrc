@@ -446,7 +446,7 @@ export default function BookingPage() {
               <div className="text-center p-6 border-2 border-dashed border-slate-200 rounded-[2rem] opacity-60">
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">{t('booking_page.trustPartner')}</p>
                 <Image
-                  src="/logo1.jpeg"
+                  src="/logo.jpeg"
                   alt="TourismDRC Trust"
                   width={150}
                   height={32}

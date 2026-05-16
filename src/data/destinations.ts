@@ -130,7 +130,7 @@ export const destinations: DestinationData[] = [
   },
   {
     slug: "zongo",
-    heroImage: "/images/destinations/zongo.jpg",
+    heroImage: "/images/destinations/vi-1.jpg",
     heroGradient: "from-blue-600 via-cyan-700 to-teal-900",
     heroIcon: "Waves",
     name: { fr: "Zongo", en: "Zongo" },
@@ -220,7 +220,7 @@ export const destinations: DestinationData[] = [
   },
   {
     slug: "kisantu",
-    heroImage: "/images/destinations/kisantu.jpg",
+    heroImage: "/images/destinations/forest.jpeg",
     heroGradient: "from-green-600 via-emerald-700 to-teal-800",
     heroIcon: "Leaf",
     name: { fr: "Kisantu", en: "Kisantu" },
@@ -310,7 +310,7 @@ export const destinations: DestinationData[] = [
   },
   {
     slug: "moanda",
-    heroImage: "/images/destinations/moanda.jpg",
+    heroImage: "/images/destinations/sa-3.jpg",
     heroGradient: "from-blue-500 via-indigo-600 to-purple-800",
     heroIcon: "Palmtree",
     name: { fr: "Moanda", en: "Moanda" },
@@ -400,7 +400,7 @@ export const destinations: DestinationData[] = [
   },
   {
     slug: "matadi",
-    heroImage: "/images/destinations/matadi.jpg",
+    heroImage: "/images/destinations/bo-10.jpg",
     heroGradient: "from-slate-600 via-gray-700 to-zinc-900",
     heroIcon: "Ship",
     name: { fr: "Matadi", en: "Matadi" },
@@ -490,7 +490,7 @@ export const destinations: DestinationData[] = [
   },
   {
     slug: "nsele",
-    heroImage: "/images/destinations/nsele.jpg",
+    heroImage: "/images/destinations/vi-4.jpg",
     heroGradient: "from-rose-500 via-pink-600 to-orange-700",
     heroIcon: "Binoculars",
     name: { fr: "Parc de la N'Sele", en: "N'Sele Park" },

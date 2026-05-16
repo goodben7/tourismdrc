@@ -125,7 +125,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href={ROUTES.home} className="flex items-center space-x-2 group">
               <Image
-                src="/logo1.jpeg"
+                src="/logo.jpeg"
                 alt="TourismDRC Logo"
                 width={180}
                 height={60}
@@ -328,7 +328,7 @@ export default function Navbar() {
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <div className="flex items-center space-x-2">
                   <Image
-                    src="/logo1.jpeg"
+                    src="/logo.jpeg"
                     alt="TourismDRC Logo"
                     width={120}
                     height={40}
